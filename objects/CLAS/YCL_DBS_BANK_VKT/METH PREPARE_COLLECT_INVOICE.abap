@@ -1,0 +1,26 @@
+  METHOD prepare_collect_invoice.
+    CONCATENATE
+    '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://boa.net/BOA.Integration.DirectFundUtilization/Service">'
+     '<soapenv:Header/>'
+     '<soapenv:Body>'
+        '<ser:GetDBSInvoiceList>'
+           '<!--Optional:-->'
+           '<ser:userName>' ms_service_info-username '</ser:userName>'
+           '<!--Optional:-->'
+           '<ser:password>' ms_service_info-password '</ser:password>'
+           '<!--Optional:-->'
+           '<ser:subscriberNumber>' ms_subscribe-subscriber_number '</ser:subscriberNumber>'
+           '<!--Optional:-->'
+           '<ser:invoiceNumber>' ms_invoice_data-invoicenumber '</ser:invoiceNumber>'
+           '<!--Optional:-->'
+           '<ser:startDate></ser:startDate>'
+           '<!--Optional:-->'
+           '<ser:endDate></ser:endDate>'
+           '<!--Optional:-->'
+           '<ser:beginLastPaymentDate></ser:beginLastPaymentDate>'
+           '<!--Optional:-->'
+           '<ser:endLastPaymentDate></ser:endLastPaymentDate>'
+        '</ser:GetDBSInvoiceList>'
+     '</soapenv:Body>'
+  '</soapenv:Envelope>' INTO rv_request.
+  ENDMETHOD.

@@ -1,0 +1,86 @@
+[
+ {
+  "table":"BALOBJ",
+  "data":
+  [
+   {
+    "OBJECT":"YDBS_APP_LOG",
+    "ABAP_LANGUAGE_VERSION":"5"
+   }
+  ]
+ },
+ {
+  "table":"BALOBJT",
+  "data":
+  [
+   {
+    "SPRAS":"E",
+    "OBJECT":"YDBS_APP_LOG",
+    "OBJTXT":"DDS Log"
+   },
+   {
+    "SPRAS":"T",
+    "OBJECT":"YDBS_APP_LOG",
+    "OBJTXT":"DBS Log"
+   }
+  ]
+ },
+ {
+  "table":"BALSUB",
+  "data":
+  [
+   {
+    "OBJECT":"YDBS_APP_LOG",
+    "SUBOBJECT":"YDBS_LIMIT_LOG"
+   }
+  ]
+ },
+ {
+  "table":"BALSUBT",
+  "data":
+  [
+   {
+    "SPRAS":"E",
+    "OBJECT":"YDBS_APP_LOG",
+    "SUBOBJECT":"YDBS_LIMIT_LOG",
+    "SUBOBJTXT":"Limit Log"
+   },
+   {
+    "SPRAS":"T",
+    "OBJECT":"YDBS_APP_LOG",
+    "SUBOBJECT":"YDBS_LIMIT_LOG",
+    "SUBOBJTXT":"Limit Log"
+   }
+  ]
+ },
+ {
+  "table":"TADIR",
+  "data":
+  [
+   {
+    "PGMID":"R3TR",
+    "OBJECT":"APLO",
+    "OBJ_NAME":"YDBS_APP_LOG",
+    "KORRNUM":"",
+    "SRCSYSTEM":"...",
+    "AUTHOR":"SAP_CUSTOMER",
+    "SRCDEP":"",
+    "DEVCLASS":"YDBS",
+    "GENFLAG":"",
+    "EDTFLAG":"",
+    "CPROJECT":" L",
+    "MASTERLANG":"T",
+    "VERSID":"",
+    "PAKNOCHECK":"",
+    "OBJSTABLTY":"",
+    "COMPONENT":"",
+    "CRELEASE":"",
+    "DELFLAG":"",
+    "TRANSLTTXT":"",
+    "CREATED_ON":"2025-05-06",
+    "CHECK_DATE":"2025-05-06",
+    "CHECK_CFG":""
+   }
+  ]
+ }
+]

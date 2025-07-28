@@ -1,0 +1,1 @@
+CLASS zbp_dbs_ddl_i_banks DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF ydbs_ddl_i_banks.
