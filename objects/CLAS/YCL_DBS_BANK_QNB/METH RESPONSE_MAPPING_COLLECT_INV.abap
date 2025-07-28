@@ -35,16 +35,18 @@
           <lv_value> = ls_xml_line2-value.
         ENDLOOP.
       ENDLOOP.
-       READ TABLE lt_xml_response INto data(ls_xml_response) with key faturano = ms_invoice_data-invoicenumber
-                                                                      odemestatusu = 'T'.
+      READ TABLE lt_xml_response INTO DATA(ls_xml_response) WITH KEY faturano = ms_invoice_data-invoicenumber
+                                                                     odemestatusu = 'T'.
       es_collect_detail = VALUE #( payment_amount = ls_xml_response-faturatutari
                                    payment_date = |{ ls_xml_response-sonodemetarihi(4) }{ ls_xml_response-sonodemetarihi+5(2) }{ ls_xml_response-sonodemetarihi+8(2) }|
                                    payment_currency = ls_xml_response-dovizkodu ).
     ELSE.
       APPEND VALUE #( id = mc_id type = mc_error number = 004 ) TO rt_messages.
-      APPEND VALUE #( id = mc_id type = mc_error number = 000 message_v1 = ls_error_text-value(50)
-                                                             message_v2 = ls_error_text-value+50(50)
-                                                             message_v3 = ls_error_text-value+100(50)
-                                                             message_v4 = ls_error_text-value+150(50) ) TO rt_messages.
+      adding_error_message(
+        EXPORTING
+          iv_message  = ls_error_text-value
+        CHANGING
+          ct_messages = rt_messages
+      ).
     ENDIF.
   ENDMETHOD.

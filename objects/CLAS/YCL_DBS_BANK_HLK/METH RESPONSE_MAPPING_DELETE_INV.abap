@@ -37,9 +37,11 @@
       APPEND VALUE #( id = mc_id type = mc_success number = 003 ) TO rt_messages.
     ELSE.
       APPEND VALUE #( id = mc_id type = mc_error number = 004 ) TO rt_messages.
-      APPEND VALUE #( id = mc_id type = 'E' number = 000 message_v1 = ls_json-errordetails-errormessage(50)
-                                                             message_v2 = ls_json-errordetails-errormessage+50(50)
-                                                             message_v3 = ls_json-errordetails-errormessage+100(50)
-                                                             message_v4 = ls_json-errordetails-errormessage+150(50) ) TO rt_messages.
+      adding_error_message(
+        EXPORTING
+          iv_message  = ls_json-errordetails-errormessage
+        CHANGING
+          ct_messages = rt_messages
+      ).
     ENDIF.
   ENDMETHOD.

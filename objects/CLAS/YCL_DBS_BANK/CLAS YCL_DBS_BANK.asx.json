@@ -83,6 +83,13 @@
   [
    {
     "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "CMPTYPE":1,
+    "MTDTYPE":0,
+    "MTDTYPE2":0
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK",
     "CMPNAME":"CALL_API",
     "CMPTYPE":1,
     "MTDTYPE":0,
@@ -276,6 +283,65 @@
   "table":"SEOCOMPODF",
   "data":
   [
+   {
+    "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "VERSION":1,
+    "ALIAS":"",
+    "REDEFIN":"",
+    "EXPOSURE":1,
+    "STATE":1,
+    "EDITORDER":1,
+    "LOCKED":"",
+    "DISPID":0,
+    "R3RELEASE":"914",
+    "AUTHOR":"",
+    "CREATEDON":"2025-07-28",
+    "CHANGEDBY":"",
+    "CHANGEDON":"0000-00-00",
+    "MTDDECLTYP":0,
+    "MTDABSTRCT":"",
+    "MTDFINAL":"",
+    "DSRNOTEOM":"",
+    "EDTX":"",
+    "MTDNEWEXC":"",
+    "MTDREPLACE":"",
+    "MTDOPTNL":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPRDONLY":"",
+    "MTDAMDPCDSCLNT":"",
+    "MTDAMDPCLNTINDEP":"",
+    "ATTDECLTYP":0,
+    "ATTDYNAMIC":"",
+    "ATTGETMTD":"",
+    "ATTSETMTD":"",
+    "ATTRDONLY":"",
+    "ATTVALUE":"",
+    "ATTPERSIST":"",
+    "ATTBUSOBJ":"",
+    "ATTKEYFLD":"",
+    "ATTEXPVIRT":0,
+    "EVTDECLTYP":0,
+    "TYPDUMMY":"",
+    "TYPTYPE":0,
+    "TYPE":"",
+    "TABLEOF":"",
+    "SRCROW1":0,
+    "SRCCOLUMN1":0,
+    "SRCROW2":0,
+    "SRCCOLUMN2":0,
+    "REFCLSNAME":"",
+    "REFINTNAME":"",
+    "REFCMPNAME":"",
+    "BCMTDINST":"",
+    "BCMTDCAT":0,
+    "BCMTDDIA":"",
+    "BCMTDCOM":"",
+    "BCMTDSYN":0,
+    "BCEVTCAT":0,
+    "TYPESRC_LENG":0,
+    "TYPESRC":""
+   },
    {
     "CLSNAME":"YCL_DBS_BANK",
     "CMPNAME":"CALL_API",
@@ -1172,7 +1238,7 @@
     "EDITORDER":4,
     "LOCKED":"",
     "DISPID":0,
-    "R3RELEASE":"914",
+    "R3RELEASE":"",
     "AUTHOR":"",
     "CREATEDON":"2025-07-24",
     "CHANGEDBY":"",
@@ -1877,6 +1943,12 @@
   [
    {
     "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "LANGU":"T",
+    "DESCRIPT":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK",
     "CMPNAME":"CALL_API",
     "LANGU":"T",
     "DESCRIPT":""
@@ -2043,6 +2115,22 @@
   "table":"SEOSUBCO",
   "data":
   [
+   {
+    "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "SCONAME":"CT_MESSAGES",
+    "CMPTYPE":1,
+    "MTDTYPE":0,
+    "SCOTYPE":0
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "SCONAME":"IV_MESSAGE",
+    "CMPTYPE":1,
+    "MTDTYPE":0,
+    "SCOTYPE":0
+   },
    {
     "CLSNAME":"YCL_DBS_BANK",
     "CMPNAME":"CALL_API",
@@ -2249,6 +2337,60 @@
   "table":"SEOSUBCODF",
   "data":
   [
+   {
+    "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "SCONAME":"CT_MESSAGES",
+    "VERSION":1,
+    "EDITORDER":2,
+    "LOCKED":"",
+    "DISPID":0,
+    "AUTHOR":"SAP_CUSTOMER",
+    "CREATEDON":"2025-07-28",
+    "CHANGEDBY":"",
+    "CHANGEDON":"0000-00-00",
+    "PARDECLTYP":2,
+    "PARPASSTYP":1,
+    "TYPTYPE":1,
+    "TYPE":"YDBS_TT_BAPIRET2",
+    "TABLEOF":"",
+    "SRCROW1":0,
+    "SRCCOLUMN1":0,
+    "SRCROW2":0,
+    "SRCCOLUMN2":0,
+    "PARVALUE":"",
+    "PAROPTIONL":"",
+    "PARPREFERD":"",
+    "EXCDECLTYP":0,
+    "IS_RESUMABLE":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "SCONAME":"IV_MESSAGE",
+    "VERSION":1,
+    "EDITORDER":1,
+    "LOCKED":"",
+    "DISPID":0,
+    "AUTHOR":"SAP_CUSTOMER",
+    "CREATEDON":"2025-07-28",
+    "CHANGEDBY":"",
+    "CHANGEDON":"0000-00-00",
+    "PARDECLTYP":0,
+    "PARPASSTYP":1,
+    "TYPTYPE":1,
+    "TYPE":"STRING",
+    "TABLEOF":"",
+    "SRCROW1":0,
+    "SRCCOLUMN1":0,
+    "SRCROW2":0,
+    "SRCCOLUMN2":0,
+    "PARVALUE":"",
+    "PAROPTIONL":"",
+    "PARPREFERD":"",
+    "EXCDECLTYP":0,
+    "IS_RESUMABLE":""
+   },
    {
     "CLSNAME":"YCL_DBS_BANK",
     "CMPNAME":"CALL_API",
@@ -2932,6 +3074,20 @@
   [
    {
     "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "SCONAME":"CT_MESSAGES",
+    "LANGU":"T",
+    "DESCRIPT":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK",
+    "CMPNAME":"ADDING_ERROR_MESSAGE",
+    "SCONAME":"IV_MESSAGE",
+    "LANGU":"T",
+    "DESCRIPT":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK",
     "CMPNAME":"CALL_API",
     "SCONAME":"ET_MESSAGES",
     "LANGU":"T",
@@ -3170,6 +3326,12 @@
     "METHODINDX":4,
     "METHODNAME":"GET_LOG",
     "FLAGS":0
+   },
+   {
+    "CLASSNAME":"YCL_DBS_BANK",
+    "METHODINDX":5,
+    "METHODNAME":"ADDING_ERROR_MESSAGE",
+    "FLAGS":0
    }
   ]
  },
@@ -3267,6 +3429,17 @@
    },
    {
     "NAME":"YCL_DBS_BANK==================CM004",
+    "VARCL":"X",
+    "DBAPL":"S",
+    "DBNA":"D$",
+    "SUBC":"I",
+    "APPL":"S",
+    "FIXPT":"X",
+    "LDBNAME":"D$S",
+    "UCCHECK":"X"
+   },
+   {
+    "NAME":"YCL_DBS_BANK==================CM005",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",

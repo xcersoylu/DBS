@@ -16,7 +16,6 @@
               iptalzaman              TYPE string,
             END OF ty_xml.
     data lt_xml_response type table of ty_xml.
-    data lv_cevap_mesaji type c LENGTH 200.
     DATA lv_day          TYPE c LENGTH 2.
     DATA lv_month        TYPE c LENGTH 2.
     DATA lv_year         TYPE c LENGTH 4.
@@ -71,10 +70,11 @@
                                                                ) ).
     ELSE.
       APPEND VALUE #( id = mc_id type = mc_error number = 004 ) TO rt_messages.
-      lv_cevap_mesaji = ls_xml_response-cevapmesaji.
-      APPEND VALUE #( id = mc_id type = 'E' number = 000 message_v1 = lv_cevap_mesaji(50)
-                                                         message_v2 = lv_cevap_mesaji+50(50)
-                                                         message_v3 = lv_cevap_mesaji+100(50)
-                                                         message_v4 = lv_cevap_mesaji+150(50) ) TO rt_messages.
+      adding_error_message(
+        EXPORTING
+          iv_message  = ls_xml_response-cevapmesaji
+        CHANGING
+          ct_messages = rt_messages
+      ).
     ENDIF.
   ENDMETHOD.
