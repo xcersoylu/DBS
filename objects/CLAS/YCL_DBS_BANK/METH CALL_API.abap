@@ -31,7 +31,8 @@
             lv_value = 'application/json'.
         ENDCASE.
         lo_web_http_request->set_header_fields( VALUE #( (  name = 'Accept' value = lv_value )
-                                                         (  name = 'Content-Type' value = lv_value ) ) ).
+                                                         (  name = 'Content-Type' value = lv_value )
+                                                         (  name = 'CompanyCode' value = |DBS{ ms_service_info-class_suffix  }{ ms_service_info-companycode }| ) ) ).
         lo_web_http_request->set_text(
           EXPORTING
             i_text   = lv_request

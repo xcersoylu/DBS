@@ -70,5 +70,6 @@ authorization dependent by _Banks
       ServiceType      = service_type;
       Username         = username;
       Password         = password;
+      ClassSuffix      = class_suffix;
     }
 }

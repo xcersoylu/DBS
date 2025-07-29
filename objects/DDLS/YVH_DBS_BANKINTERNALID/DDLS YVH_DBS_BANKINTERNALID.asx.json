@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_DBS_BANKINTERNALID",
     "STRUCOBJN":"YVH_DBS_BANKINTERNALID",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Bank Value Help"
+   },
+   {
+    "DDLNAME":"YVH_DBS_BANKINTERNALID",
+    "STRUCOBJN":"YVH_DBS_BANKINTERNALID",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Banka Arama Yardımı"

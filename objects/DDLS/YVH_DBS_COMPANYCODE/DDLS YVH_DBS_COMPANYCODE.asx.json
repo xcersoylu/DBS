@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_DBS_COMPANYCODE",
     "STRUCOBJN":"YVH_DBS_COMPANYCODE",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Company Code Search Help"
+   },
+   {
+    "DDLNAME":"YVH_DBS_COMPANYCODE",
+    "STRUCOBJN":"YVH_DBS_COMPANYCODE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Şirket Kodu Arama Yardımı"

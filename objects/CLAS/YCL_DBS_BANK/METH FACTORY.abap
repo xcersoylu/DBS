@@ -4,7 +4,12 @@
     INTO @DATA(ls_service_info).
     IF sy-subrc = 0.
       IF ls_service_info IS NOT INITIAL.
-        CREATE OBJECT ro_object TYPE (ls_service_info-class_name).
+        IF ls_service_info-class_name IS INITIAL.
+          DATA(lv_class_name) = mc_class_name && ls_service_info-class_suffix.
+          CREATE OBJECT ro_object TYPE (lv_class_name).
+        ELSE.
+          CREATE OBJECT ro_object TYPE (ls_service_info-class_name).
+        ENDIF.
         ro_object->ms_service_info = ls_service_info.
         SELECT SINGLE * FROM ydbs_t_subsmap WHERE companycode = @iv_companycode
                                               AND bankinternalid = @iv_bankinternalid

@@ -6,7 +6,7 @@
     DATA(lv_get_method) = request->get_method( ).
     /ui2/cl_json=>deserialize( EXPORTING json = lv_request_body CHANGING data = ms_request ).
     SELECT * FROM ydbs_t_bnk_dtype INTO TABLE @DATA(lt_bank_doctype).
-    LOOP AT ms_request-data INTO DATA(ls_request).
+    LOOP AT ms_request-invoicedata INTO DATA(ls_request).
       DATA(lo_bank) = ycl_dbs_bank=>factory( iv_bankinternalid = ls_request-bankinternalid
                                               iv_companycode    = ls_request-companycode
                                               iv_customer       = ls_request-customer

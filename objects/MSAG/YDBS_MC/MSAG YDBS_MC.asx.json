@@ -220,6 +220,12 @@
     "TEXT":"Error while sending invoice."
    },
    {
+    "SPRSL":"E",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"005",
+    "TEXT":"& is created."
+   },
+   {
     "SPRSL":"T",
     "ARBGB":"YDBS_MC",
     "MSGNR":"000",
@@ -292,42 +298,42 @@
     "ARBGB":"YDBS_MC",
     "MSGNR":"000",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-28",
+    "DATUM":"2025-07-29",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"001",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-28",
+    "DATUM":"2025-07-29",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"002",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-28",
+    "DATUM":"2025-07-29",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"003",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-28",
+    "DATUM":"2025-07-29",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"004",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-28",
+    "DATUM":"2025-07-29",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"005",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-28",
+    "DATUM":"2025-07-29",
     "SELFDEF":"3"
    }
   ]
