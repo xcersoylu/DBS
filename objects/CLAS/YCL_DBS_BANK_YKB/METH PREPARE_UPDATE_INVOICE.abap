@@ -3,10 +3,10 @@
     DATA lv_old_date TYPE c LENGTH 10.
     DATA lv_waers TYPE c LENGTH 3.
     DATA lv_amount TYPE string.
-    IF ms_service_info-currency = 'TRY'.
+    IF ms_invoice_data-transactioncurrency = 'TRY'.
       lv_waers = 'TL'.
     ELSE.
-      lv_waers = ms_service_info-currency.
+      lv_waers = ms_invoice_data-transactioncurrency.
     ENDIF.
     lv_amount = ms_invoice_data-invoiceamount.CONDENSE lv_amount.
     CONCATENATE ms_invoice_data-invoiceduedate+6(2) '/'

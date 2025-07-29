@@ -19,7 +19,7 @@
   '"Fatura_No": "' ms_invoice_data-invoicenumber '",'
   '"Fatura_Tarihi": "' lv_bldat '",'
   '"Fatura_Tutari":' lv_amount ','
-  '"Para_Birimi": "' ms_service_info-currency '",'
+  '"Para_Birimi": "' ms_invoice_data-transactioncurrency '",'
   '"Aciklama": "' ms_subscribe-customer '",'
   '"Vade_Tarihi": "' lv_date '"'
   '}'

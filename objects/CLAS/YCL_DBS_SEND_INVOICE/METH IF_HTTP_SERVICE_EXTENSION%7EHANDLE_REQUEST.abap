@@ -36,7 +36,6 @@
         IF lt_clearing_messages IS NOT INITIAL.
           APPEND LINES OF lt_clearing_messages TO ms_response-messages.
         ENDIF.
-      ENDIF.
 *log kayıt
       APPEND VALUE #( companycode             = ls_request-companycode
                       accountingdocument      = ls_request-accountingdocument
@@ -51,6 +50,8 @@
                       temporary_document_year = lv_temp_year
                       clearing_document       = lv_clearing_doc
                       clearing_document_year  = lv_clearing_year ) TO lt_log.
+
+      ENDIF.
 *clear
       FREE: lo_bank , lo_fi_doc.
       CLEAR: lo_bank , lo_fi_doc , lv_temp_doc , lv_temp_year , lt_temp_messages ,

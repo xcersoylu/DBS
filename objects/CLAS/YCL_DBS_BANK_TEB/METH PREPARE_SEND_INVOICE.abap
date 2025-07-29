@@ -7,10 +7,10 @@
     lv_amount = ms_invoice_data-invoiceamount.
     CONDENSE lv_amount.
 
-    IF ms_service_info-currency EQ 'TRY'.
+    IF ms_invoice_data-transactioncurrency EQ 'TRY'.
       lv_waers = 'TL'.
     ELSE.
-      lv_waers = ms_service_info-currency.
+      lv_waers = ms_invoice_data-transactioncurrency.
     ENDIF.
 
 

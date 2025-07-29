@@ -12,7 +12,7 @@
               '<!--Optional:-->'
               '<bayiReferans>' ms_subscribe-subscriber_number '</bayiReferans>'
               '<!--Optional:-->'
-              '<dovizKodu>' ms_service_info-currency '</dovizKodu>'
+              '<dovizKodu>' ms_invoice_data-transactioncurrency '</dovizKodu>'
               '<!--Optional:-->'
               '<faturaNo>' ms_invoice_data-invoicenumber '</faturaNo>'
               '<!--Optional:-->'

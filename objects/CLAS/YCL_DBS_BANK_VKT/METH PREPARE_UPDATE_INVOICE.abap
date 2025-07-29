@@ -25,7 +25,7 @@
 '<ser:entity>'
 '<boa:Explanation></boa:Explanation>'
 '<boa:InvoiceAmount>' lv_amount '</boa:InvoiceAmount>'
-'<boa:InvoiceCurrencyCode>' ms_service_info-currency '</boa:InvoiceCurrencyCode>'
+'<boa:InvoiceCurrencyCode>' ms_invoice_data-transactioncurrency '</boa:InvoiceCurrencyCode>'
 '<boa:InvoiceDate>' lv_bldat '</boa:InvoiceDate>'
 '<boa:InvoiceNumber>' ms_invoice_data-invoicenumber '</boa:InvoiceNumber>'
 '<boa:IsInvoiceLock>false</boa:IsInvoiceLock>'

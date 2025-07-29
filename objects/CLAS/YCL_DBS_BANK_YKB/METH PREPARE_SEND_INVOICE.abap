@@ -6,10 +6,10 @@
                 ms_invoice_data-invoiceduedate+4(2) '/'
                 ms_invoice_data-invoiceduedate(4)
     INTO lv_date.
-    IF ms_service_info-currency = 'TRY'.
+    IF ms_invoice_data-transactioncurrency = 'TRY'.
       lv_waers = 'TL'.
     ELSE.
-      lv_waers = ms_service_info-currency.
+      lv_waers = ms_invoice_data-transactioncurrency.
     ENDIF.
     lv_amount = ms_invoice_data-invoiceamount.CONDENSE lv_amount.
     CONCATENATE

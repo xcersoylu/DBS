@@ -20,7 +20,7 @@
         '<akb:Tutar>' lv_amount '</akb:Tutar>'
         '<akb:IslemTipi>' lv_send '</akb:IslemTipi>'
         '<akb:VadeTarihi>' lv_bldat '</akb:VadeTarihi>'
-        '<akb:ParaBirimi>' ms_service_info-currency '</akb:ParaBirimi>'
+        '<akb:ParaBirimi>' ms_invoice_data-transactioncurrency '</akb:ParaBirimi>'
         '</akb:invoiceParams>'
         '</akb:VadeliFaturaYukle>'
         '</soapenv:Body>'

@@ -39,7 +39,7 @@
                '<v11:lastPaymentDate>' lv_date '</v11:lastPaymentDate>'
                '<v11:invoiceAmount>'
                   '<v11:amount>' lv_amount '</v11:amount>'
-                  '<v11:currencyCode>' ms_service_info-currency '</v11:currencyCode>'
+                  '<v11:currencyCode>' ms_invoice_data-transactioncurrency '</v11:currencyCode>'
                '</v11:invoiceAmount>'
                '<v11:collectionType>V</v11:collectionType>'
                '<!--Optional:-->'

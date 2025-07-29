@@ -13,7 +13,7 @@
     '<akb:Tutar>' lv_amount '</akb:Tutar>'
     '<akb:IslemTipi>' mc_deleted '</akb:IslemTipi>'
     '<akb:VadeTarihi>' ms_invoice_data-invoiceduedate '</akb:VadeTarihi>'
-    '<akb:ParaBirimi>' ms_service_info-currency '</akb:ParaBirimi>'
+    '<akb:ParaBirimi>' ms_invoice_data-transactioncurrency '</akb:ParaBirimi>'
     '</akb:invoiceParams>'
     '</akb:VadeliFaturaYukle>'
     '</soapenv:Body>'
