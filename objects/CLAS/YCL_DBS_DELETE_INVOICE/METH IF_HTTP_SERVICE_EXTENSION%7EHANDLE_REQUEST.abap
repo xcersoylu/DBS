@@ -13,14 +13,15 @@
       IF lt_messages IS NOT INITIAL.
         APPEND LINES OF lt_messages TO ms_response-messages.
       ENDIF.
-
       "#TODO delete durumda FI belgeleri ne olacak ?
-      DELETE FROM ydbs_t_log
-       WHERE companycode             = @ls_request-companycode
-         AND accountingdocument      = @ls_request-accountingdocument
-         AND fiscalyear              = @ls_request-fiscalyear
-         AND accountingdocumentitem  = @ls_request-accountingdocumentitem.
-        free lo_bank. clear lo_bank.
+      IF NOT line_exists( lt_messages[ type = 'E' ] ).
+        DELETE FROM ydbs_t_log
+         WHERE companycode             = @ls_request-companycode
+           AND accountingdocument      = @ls_request-accountingdocument
+           AND fiscalyear              = @ls_request-fiscalyear
+           AND accountingdocumentitem  = @ls_request-accountingdocumentitem.
+      ENDIF.
+      FREE lo_bank. CLEAR lo_bank.
     ENDLOOP.
     DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
     response->set_text( lv_response_body ).

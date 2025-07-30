@@ -11,22 +11,22 @@
                         account_type = 'D'
                         aparaccount  = ms_invoice_data-customer
                         fiscal_year  = ms_invoice_data-documentdate(4)
-                        accounting_document = ms_invoice_data-invoicenumber
-                        accounting_document_item = '1' "sabit mi ?
+                        accounting_document = ms_invoice_data-accountingdocument
+                        accounting_document_item = ms_invoice_data-accountingdocumentitem
                        ) TO lt_aparitems.
         APPEND VALUE #( company_code = ms_invoice_data-companycode
                         account_type = 'D'
                         aparaccount  = ms_invoice_data-customer
                         fiscal_year  = mv_temporary_fi_doc_year
                         accounting_document = mv_temporary_fi_doc
-                        accounting_document_item = '1' "sabit mi ?
+                        accounting_document_item = '2' "müşteri kalemi 2. kalem olduğu için
                        ) TO lt_aparitems.
         APPEND VALUE #( journal_entry = VALUE #( company_code              = ms_invoice_data-companycode
                                                  accounting_document_type  = 'DZ'
                                                  document_date             = ms_collect_detail-payment_date
                                                  posting_date              = ms_collect_detail-payment_date
                                                  currency_code             = ms_collect_detail-payment_currency
-                                                 document_header_text      = 'Denkleştirme Kaydı'
+                                                 document_header_text      = |{ ms_invoice_data-accountingdocument }/{ mv_temporary_fi_doc }|
                                                  created_by_user           = cl_abap_context_info=>get_user_technical_name(  )
 *                                                glitems                   =
                                                 aparitems                 = lt_aparitems ) ) TO
@@ -52,6 +52,10 @@
           IF sy-subrc = 0.
             ev_accountingdocument = lv_clearing_document.
             ev_fiscalyear = mv_temporary_fi_doc_year.
+            APPEND VALUE #( id = 'YDBS_MC'
+                            type = 'S'
+                            number = 005
+                            message_v1 = ev_accountingdocument ) TO et_messages.
             EXIT.
           ELSE.
             WAIT UP TO 1 SECONDS.

@@ -1,8 +1,8 @@
   METHOD prepare_send_invoice.
-    DATA : lv_amount   TYPE string,
-           lv_waers TYPE waers,
-           lv_vade  TYPE char10,
-           lv_bldat TYPE char10.
+    DATA : lv_amount TYPE string,
+           lv_waers  TYPE waers,
+           lv_vade   TYPE c LENGTH 10,
+           lv_bldat  TYPE c LENGTH 10.
 
     lv_amount = ms_invoice_data-invoiceamount.
     CONDENSE lv_amount.
@@ -12,7 +12,6 @@
     ELSE.
       lv_waers = ms_invoice_data-transactioncurrency.
     ENDIF.
-
 
     CONCATENATE ms_invoice_data-invoiceduedate+6(2) '/'
                 ms_invoice_data-invoiceduedate+4(2) '/'
@@ -45,5 +44,5 @@
             '<com:aciklama></com:aciklama>'
           '</com:TEBDBSFaturaYukle>'
        '</soapenv:Body>'
-    '</soapenv:Envelope>' into rv_request.
+    '</soapenv:Envelope>' INTO rv_request.
   ENDMETHOD.
