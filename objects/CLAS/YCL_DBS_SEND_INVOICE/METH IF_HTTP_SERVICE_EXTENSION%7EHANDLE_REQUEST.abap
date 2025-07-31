@@ -37,19 +37,19 @@
           APPEND LINES OF lt_clearing_messages TO ms_response-messages.
         ENDIF.
 *log kayıt
-      APPEND VALUE #( companycode             = ls_request-companycode
-                      accountingdocument      = ls_request-accountingdocument
-                      fiscalyear              = ls_request-fiscalyear
-                      accountingdocumentitem  = ls_request-accountingdocumentitem
-                      invoicenumber           = ls_request-invoicenumber
-                      invoiceduedate          = ls_request-invoiceduedate
-                      invoiceamount           = ls_request-invoiceamount
-                      transactioncurrency     = ls_request-transactioncurrency
-                      invoicestatus           = 'S'
-                      temporary_document      = lv_temp_doc
-                      temporary_document_year = lv_temp_year
-                      clearing_document       = lv_clearing_doc
-                      clearing_document_year  = lv_clearing_year ) TO lt_log.
+        APPEND VALUE #( companycode             = ls_request-companycode
+                        accountingdocument      = ls_request-accountingdocument
+                        fiscalyear              = ls_request-fiscalyear
+                        accountingdocumentitem  = ls_request-accountingdocumentitem
+                        invoicenumber           = ls_request-invoicenumber
+                        invoiceduedate          = ls_request-invoiceduedate
+                        invoiceamount           = ls_request-invoiceamount
+                        transactioncurrency     = ls_request-transactioncurrency
+                        invoicestatus           = 'S'
+                        temporary_document      = lv_temp_doc
+                        temporary_document_year = lv_temp_year
+                        clearing_document       = lv_clearing_doc
+                        clearing_document_year  = lv_clearing_year ) TO lt_log.
 
       ENDIF.
 *clear
@@ -59,6 +59,18 @@
     ENDLOOP.
     IF lt_log IS NOT INITIAL.
       MODIFY ydbs_t_log FROM TABLE @lt_log.
+    ENDIF.
+    IF ms_response-messages IS NOT INITIAL.
+      LOOP AT ms_response-messages ASSIGNING FIELD-SYMBOL(<ls_message>).
+        MESSAGE ID <ls_message>-id
+                TYPE <ls_message>-type
+                NUMBER <ls_message>-number
+                WITH <ls_message>-message_v1
+                     <ls_message>-message_v2
+                     <ls_message>-message_v3
+                     <ls_message>-message_v4
+               INTO <ls_message>-message.
+      ENDLOOP.
     ENDIF.
     DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
     response->set_text( lv_response_body ).
