@@ -57,6 +57,7 @@
       INNER JOIN ydbs_ddl_i_bsid AS bsid ON bsid~customer = subscriber~customer
                                         AND bsid~companycode = subscriber~companycode
       WHERE bsid~documentdate IN @ms_request-documentdate
+        and bsid~DebitCreditCode = 'S'
         AND EXISTS ( SELECT * FROM ydbs_t_doctype WHERE companycode = bsid~companycode AND document_type = bsid~accountingdocumenttype )
       INTO CORRESPONDING FIELDS OF TABLE @ms_response-data.
     IF sy-subrc = 0.
