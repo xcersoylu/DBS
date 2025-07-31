@@ -183,7 +183,7 @@
             <ls_send_data>-maturity_invoice_count = ls_send_limit-maturity_invoice_count.
             <ls_send_data>-over_limit             = ls_send_limit-over_limit.
           ENDIF.
-          <ls_send_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = 'R' ]-description OPTIONAL ).
+          <ls_send_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = <ls_send_data>-invoicestatus ]-description OPTIONAL ).
         ENDLOOP.
         APPEND LINES OF lt_send_documents TO ms_response-data.
       ENDIF.
