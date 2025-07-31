@@ -7,9 +7,9 @@
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2025-07-07",
-    "CHANGED_AT":"14:33:00",
-    "UUID":"FA163EBBCF7E1FE096E7E8F2945EC523",
+    "CHANGED_ON":"2025-07-31",
+    "CHANGED_AT":"07:55:28",
+    "UUID":"FA163EBBCF7E1FE09BBC772955FD6562",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YDBS_DDL_P_BNK_DTYPE with\r\n{\r\n  @UI.facet: [ { id:            'Clearing',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'DBS Denkleştirme',\r\n                 position:      10 }  ]\r\n\r\n  @UI : { lineItem: [{  position: 10 }] , identification: [{  position: 10 }] }\r\n  Bankinternalid;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_COMPANYCODE', element: 'CompanyCode' }}]\r\n  Companycode;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  Housebank;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] }\r\n  Housebankaccount;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  ShortDescription;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountInChartOfAccounts', element: 'GLAccount' }}]\r\n  @EndUserText.label: 'Arbitraj Hesabı'\r\n  ArbitrageAccount;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]\r\n  CollectionDocumentType;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]\r\n  SendingDocumentType;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]\r\n  DifferenceDocumentType;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountInChartOfAccounts', element: 'GLAccount' }}]\r\n  @EndUserText.label: 'Denkleştirme Hesabı'\r\n  ClearingAccount;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountInChartOfAccounts', element: 'GLAccount' }}]\r\n  @EndUserText.label: 'Ana Banka Hesabı'\r\n  MainAccount;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }\r\n  Profitcenter;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YDBS_DDL_P_BNK_DTYPE with\r\n{\r\n  @UI.facet: [ { id:            'Clearing',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'DBS Denkleştirme',\r\n                 position:      10 }  ]\r\n\r\n  @UI : { lineItem: [{  position: 10 }] , identification: [{  position: 10 }] }\r\n  Bankinternalid;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_COMPANYCODE', element: 'CompanyCode' }}]\r\n  Companycode;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  Housebank;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] }\r\n  Housebankaccount;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  ShortDescription;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountInChartOfAccounts', element: 'GLAccount' }}]\r\n  @EndUserText.label: 'Arbitraj Hesabı'\r\n  ArbitrageAccount;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]\r\n    @EndUserText.label: 'Tahsilat Döküman Tipi'\r\n  CollectionDocumentType;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]\r\n  @EndUserText.label: 'Gönderim Döküman Tipi'\r\n  SendingDocumentType;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]\r\n  @EndUserText.label: 'Fark Döküman Tipi'\r\n  DifferenceDocumentType;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountInChartOfAccounts', element: 'GLAccount' }}]\r\n  @EndUserText.label: 'Denkleştirme Hesabı'\r\n  ClearingAccount;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_GLAccountInChartOfAccounts', element: 'GLAccount' }}]\r\n  @EndUserText.label: 'Ana Banka Hesabı'\r\n  MainAccount;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }\r\n  Profitcenter;\r\n\r\n}"
    }
   ]
  },
@@ -178,6 +178,13 @@
    {
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
     "ELEMENT":"COLLECTIONDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Tahsilat Döküman Tipi'"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "ELEMENT":"COLLECTIONDOCUMENTTYPE",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"70"
@@ -230,6 +237,13 @@
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
     "ELEMENT_TYPE":"S",
     "VALUE":"'I_AccountingDocumentType'"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "ELEMENT":"DIFFERENCEDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Fark Döküman Tipi'"
    },
    {
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
@@ -339,6 +353,13 @@
    {
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
     "ELEMENT":"SENDINGDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Gönderim Döküman Tipi'"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "ELEMENT":"SENDINGDOCUMENTTYPE",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"80"
@@ -394,9 +415,30 @@
    {
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
     "DDLANGUAGE":"E",
+    "ELEMENT":"COLLECTIONDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "TEXT":"Collection Document Type"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"DIFFERENCEDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "TEXT":"Diffence Document Type"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "DDLANGUAGE":"E",
     "ELEMENT":"MAINACCOUNT",
     "NAME":"ENDUSERTEXT.LABEL",
     "TEXT":"Main Bank Account"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"SENDINGDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "TEXT":"Sending Document Type"
    },
    {
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
@@ -422,9 +464,30 @@
    {
     "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
     "DDLANGUAGE":"T",
+    "ELEMENT":"COLLECTIONDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "TEXT":"Tahsilat Döküman Tipi"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"DIFFERENCEDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "TEXT":"Fark Döküman Tipi"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "DDLANGUAGE":"T",
     "ELEMENT":"MAINACCOUNT",
     "NAME":"ENDUSERTEXT.LABEL",
     "TEXT":"Ana Banka Hesabı"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_BNK_DTYPE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"SENDINGDOCUMENTTYPE",
+    "NAME":"ENDUSERTEXT.LABEL",
+    "TEXT":"Gönderim Döküman Tipi"
    }
   ]
  },
@@ -437,8 +500,8 @@
     "EXTENDED_ARTIFACT":"YDBS_DDL_P_BNK_DTYPE",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"FA163EBBCF7E1FE096E7E8F2945EC523",
-    "RT_HASH":"BB121818721549AE2EC9B0F2398A826700F1D57B",
+    "DT_UUID":"FA163EBBCF7E1FE09BBC772955FD6562",
+    "RT_HASH":"1F1A8D8BC41F381A500DF4EC88625405AD87BAC0",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

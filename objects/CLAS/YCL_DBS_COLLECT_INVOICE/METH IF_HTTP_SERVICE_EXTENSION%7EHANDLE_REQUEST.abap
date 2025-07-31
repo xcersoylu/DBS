@@ -47,6 +47,18 @@
       CLEAR: lo_bank , lo_fi_doc , lv_collect_doc , lv_collect_year , lt_collect_messages , lt_messages .
 
     ENDLOOP.
+    IF ms_response-messages IS NOT INITIAL.
+      LOOP AT ms_response-messages ASSIGNING FIELD-SYMBOL(<ls_message>).
+        MESSAGE ID <ls_message>-id
+                TYPE <ls_message>-type
+                NUMBER <ls_message>-number
+                WITH <ls_message>-message_v1
+                     <ls_message>-message_v2
+                     <ls_message>-message_v3
+                     <ls_message>-message_v4
+               INTO <ls_message>-message.
+      ENDLOOP.
+    ENDIF.
     DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
     response->set_text( lv_response_body ).
     response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).
