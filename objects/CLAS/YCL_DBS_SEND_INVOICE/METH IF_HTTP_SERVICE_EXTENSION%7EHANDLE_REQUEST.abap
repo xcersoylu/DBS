@@ -24,17 +24,21 @@
             ev_fiscalyear         = DATA(lv_temp_year)
             et_messages           = DATA(lt_temp_messages)
         ).
-        lo_fi_doc->create_clearing_doc(
-          IMPORTING
-            ev_accountingdocument = DATA(lv_clearing_doc)
-            ev_fiscalyear         = DATA(lv_clearing_year)
-            et_messages           = DATA(lt_clearing_messages)
-        ).
         IF lt_temp_messages IS NOT INITIAL.
           APPEND LINES OF lt_temp_messages TO ms_response-messages.
         ENDIF.
-        IF lt_clearing_messages IS NOT INITIAL.
-          APPEND LINES OF lt_clearing_messages TO ms_response-messages.
+        IF line_exists( lt_temp_messages[ type = mc_error ] ).
+          APPEND VALUE #( id = 'YDBS_MC' type = mc_error number = 006 ) TO ms_response-messages.
+        ELSE.
+          lo_fi_doc->create_clearing_doc(
+            IMPORTING
+              ev_accountingdocument = DATA(lv_clearing_doc)
+              ev_fiscalyear         = DATA(lv_clearing_year)
+              et_messages           = DATA(lt_clearing_messages)
+          ).
+          IF lt_clearing_messages IS NOT INITIAL.
+            APPEND LINES OF lt_clearing_messages TO ms_response-messages.
+          ENDIF.
         ENDIF.
 *log kayıt
         APPEND VALUE #( companycode             = ls_request-companycode

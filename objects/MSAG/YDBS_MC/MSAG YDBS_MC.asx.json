@@ -110,6 +110,42 @@
     "DOKLRELES":"",
     "DOKLDATE":"0000-00-00",
     "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YDBS_MC006",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YDBS_MC007",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
    }
   ]
  },
@@ -182,6 +218,28 @@
     "TXTLINES":0,
     "DOKSTATE":"N",
     "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YDBS_MC006",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YDBS_MC007",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
    }
   ]
  },
@@ -226,6 +284,18 @@
     "TEXT":"& is created."
    },
    {
+    "SPRSL":"E",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"006",
+    "TEXT":"Invoce upload document is not created."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"007",
+    "TEXT":"&1-&2 is upload but document cannot created. Create manually."
+   },
+   {
     "SPRSL":"T",
     "ARBGB":"YDBS_MC",
     "MSGNR":"000",
@@ -260,6 +330,18 @@
     "ARBGB":"YDBS_MC",
     "MSGNR":"005",
     "TEXT":"& nolu belge yaratıldı."
+   },
+   {
+    "SPRSL":"T",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"006",
+    "TEXT":"Fatura yükleme belgesi yaratılamadı."
+   },
+   {
+    "SPRSL":"T",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"007",
+    "TEXT":"&1-&2 için yükleme tamamlandı belgeler yaratılmadı. Manuel yaratınız."
    }
   ]
  },
@@ -332,6 +414,20 @@
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"005",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-07-31",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"006",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-07-31",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"007",
     "NAME":"SAP_CUSTOMER",
     "DATUM":"2025-07-31",
     "SELFDEF":"3"

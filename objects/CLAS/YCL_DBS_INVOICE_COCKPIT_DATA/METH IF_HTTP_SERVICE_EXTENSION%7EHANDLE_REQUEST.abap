@@ -2,6 +2,13 @@
     DATA(lv_request_body) = request->get_text( ).
     DATA(lv_get_method) = request->get_method( ).
     /ui2/cl_json=>deserialize( EXPORTING json = lv_request_body CHANGING data = ms_request ).
+    SELECT value_low AS value ,
+           text AS description
+       FROM ddcds_customer_domain_value_t( p_domain_name = 'YDBS_D_INVOICESTATUS' )
+       WHERE language = @sy-langu
+     order by value
+    INTO TABLE @DATA(lt_invoicestatus).
+
     SELECT * FROM ydbs_t_subsmap
       WHERE companycode IN @ms_request-companycode
         AND bankinternalid IN @ms_request-bankinternalid
@@ -53,8 +60,8 @@
         AND EXISTS ( SELECT * FROM ydbs_t_doctype WHERE companycode = bsid~companycode AND document_type = bsid~accountingdocumenttype )
       INTO CORRESPONDING FIELDS OF TABLE @ms_response-data.
     IF sy-subrc = 0.
-      sort ms_Response-data by companycode accountingdocument fiscalyear accountingdocumentitem bankinternalid.
-      delete ADJACENT DUPLICATES FROM ms_response-data COMPARING companycode accountingdocument fiscalyear accountingdocumentitem bankinternalid.
+      SORT ms_response-data BY companycode accountingdocument fiscalyear accountingdocumentitem bankinternalid.
+      DELETE ADJACENT DUPLICATES FROM ms_response-data COMPARING companycode accountingdocument fiscalyear accountingdocumentitem bankinternalid.
       SELECT limit~* FROM ydbs_t_limit AS limit INNER JOIN @ms_response-data AS itab ON limit~companycode = itab~companycode
                                                                               AND limit~bankinternalid = itab~bankinternalid
                                                                               AND limit~customer = itab~customer
@@ -92,8 +99,10 @@
           <fs_data>-invoiceamount  = ls_log-invoiceamount.
           <fs_data>-transactioncurrency = ls_log-transactioncurrency.
           <fs_data>-invoicestatus = ls_log-invoicestatus.
+          <fs_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = ls_log-invoicestatus ]-description OPTIONAL ).
         ELSE.
           <fs_data>-invoicestatus = 'R'.
+          <fs_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = 'R' ]-description OPTIONAL ).
         ENDIF.
       ENDLOOP.
     ENDIF.
