@@ -7,9 +7,9 @@
     "DDLXNAME":"YDBS_DDL_MD_SERVICE",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2025-07-29",
-    "CHANGED_AT":"08:47:00",
-    "UUID":"FA163EBBCF7E1FE09B8B12D86D22A55E",
+    "CHANGED_ON":"2025-07-31",
+    "CHANGED_AT":"17:57:02",
+    "UUID":"FA163EBBCF7E1FE09BC6F84C07CC2563",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"YDBS_DDL_MD_SERVICE",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YDBS_DDL_P_SERVICE with\r\n{\r\n  @UI.facet: [ { id:            'Service',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'DBS Servisler',\r\n                 position:      10 }  ]\r\n\r\n  @UI : { lineItem: [{  position: 10 }] , identification: [{  position: 10 }] }\r\n  Bankinternalid;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_COMPANYCODE', element: 'CompanyCode' }}]\r\n  Companycode;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  FirmCode;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] }\r\n  CpiUsername;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  CpiPassword;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] }\r\n  CpiUrl;\r\n  @UI : { lineItem: [{  position: 65 }] , identification: [{  position: 65 }] }\r\n  ClassName;  \r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] }\r\n  AdditionalField1;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] }\r\n  AdditionalField2;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  AdditionalField3;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  AdditionalField4;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  Currency;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }  \r\n  ServiceType;\r\n  @UI : { lineItem: [{  position: 130 }] , identification: [{  position: 130 }] } \r\n  Username; \r\n  @UI : { lineItem: [{  position: 140 }] , identification: [{  position: 140 }] } \r\n  Password;  \r\n  @UI : { lineItem: [{  position: 150 }] , identification: [{  position: 150 }] }\r\n    @Consumption.valueHelpDefinition: [ { entity: { name: 'YVH_DBS_CLASS_SUFFIX', element: 'Value' }}]     \r\n  ClassSuffix;      \r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YDBS_DDL_P_SERVICE with\r\n{\r\n  @UI.facet: [ { id:            'Service',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'DBS Servisler',\r\n                 position:      10 }  ]\r\n\r\n  @UI : { lineItem: [{  position: 10 }] , identification: [{  position: 10 }] }\r\n  Bankinternalid;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_COMPANYCODE', element: 'CompanyCode' }}]\r\n  Companycode;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  FirmCode;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] }\r\n  CpiUsername;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  CpiPassword;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] }\r\n  CpiUrl;\r\n  @UI : { lineItem: [{  position: 65 }] , identification: [{  position: 65 }] }\r\n  ClassName;  \r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] }\r\n  AdditionalField1;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] }\r\n  AdditionalField2;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  AdditionalField3;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  AdditionalField4;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  Currency;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }  \r\n    @Consumption.valueHelpDefinition: [ { entity: { name: 'YVH_DBS_SERVICE_TYPE', element: 'Value' }}]      \r\n  ServiceType;\r\n  @UI : { lineItem: [{  position: 130 }] , identification: [{  position: 130 }] } \r\n  Username; \r\n  @UI : { lineItem: [{  position: 140 }] , identification: [{  position: 140 }] } \r\n  Password;  \r\n  @UI : { lineItem: [{  position: 150 }] , identification: [{  position: 150 }] }\r\n    @Consumption.valueHelpDefinition: [ { entity: { name: 'YVH_DBS_CLASS_SUFFIX', element: 'Value' }}]     \r\n  ClassSuffix;      \r\n}"
    }
   ]
  },
@@ -304,6 +304,20 @@
    {
     "DDLXNAME":"YDBS_DDL_MD_SERVICE",
     "ELEMENT":"SERVICETYPE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Value'"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_SERVICE",
+    "ELEMENT":"SERVICETYPE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'YVH_DBS_SERVICE_TYPE'"
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_SERVICE",
+    "ELEMENT":"SERVICETYPE",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"120"
@@ -360,8 +374,8 @@
     "EXTENDED_ARTIFACT":"YDBS_DDL_P_SERVICE",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"FA163EBBCF7E1FE09B8B12D86D22A55E",
-    "RT_HASH":"B8C7EC29A34523122FAF35EB9AFAFC3A1523B092",
+    "DT_UUID":"FA163EBBCF7E1FE09BC6F84C07CC2563",
+    "RT_HASH":"9E3CB2F556542971EDD85384FB6C2EE99C08AAA7",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }
@@ -389,6 +403,16 @@
     "REF_OBJECT_TYPE":"STOB",
     "REF_OBJECT_SUBTYPE":"DO",
     "REF_OBJECT_NAME":"I_COMPANYCODE",
+    "REF_OBJECT_ELEMENT":""
+   },
+   {
+    "DDLXNAME":"YDBS_DDL_MD_SERVICE",
+    "ELEMENT":"SERVICETYPE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "PATH":"YVH_DBS_SERVICE_TYPE",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DO",
+    "REF_OBJECT_NAME":"YVH_DBS_SERVICE_TYPE",
     "REF_OBJECT_ELEMENT":""
    }
   ]

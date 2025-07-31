@@ -1,12 +1,13 @@
   METHOD if_http_service_extension~handle_request.
     DATA(lv_request_body) = request->get_text( ).
     DATA(lv_get_method) = request->get_method( ).
+    DATA lt_send_documents TYPE ydbs_tt_invoice_cockpit_data.
     /ui2/cl_json=>deserialize( EXPORTING json = lv_request_body CHANGING data = ms_request ).
     SELECT value_low AS value ,
            text AS description
        FROM ddcds_customer_domain_value_t( p_domain_name = 'YDBS_D_INVOICESTATUS' )
        WHERE language = @sy-langu
-     order by value
+     ORDER BY value
     INTO TABLE @DATA(lt_invoicestatus).
 
     SELECT * FROM ydbs_t_subsmap
@@ -23,6 +24,7 @@
                             AND customer = ls_priority-customer.
       ENDLOOP.
     ENDIF.
+*gönderilmemişler
     SELECT bsid~companycode,
            bsid~accountingdocument,
            bsid~fiscalyear,
@@ -31,7 +33,7 @@
            customer~organizationbpname1 AS customername,
            customer~organizationbpname2 AS customersurname,
            subscriber~bankinternalid,
-           concat( concat( bsid~accountingdocument , bsid~accountingdocumentitem ) , substring( bsid~fiscalyear,2,2 ) ) AS invoicenumber,
+           concat( concat( bsid~accountingdocument , bsid~accountingdocumentitem ) , substring( bsid~fiscalyear,3,2 ) ) AS invoicenumber,
            customer~taxnumber1,
            customer~taxnumber2,
            subscriber~subscriber_number AS subscribernumber,
@@ -57,7 +59,7 @@
       INNER JOIN ydbs_ddl_i_bsid AS bsid ON bsid~customer = subscriber~customer
                                         AND bsid~companycode = subscriber~companycode
       WHERE bsid~documentdate IN @ms_request-documentdate
-        and bsid~DebitCreditCode = 'S'
+        AND bsid~debitcreditcode = 'S'
         AND EXISTS ( SELECT * FROM ydbs_t_doctype WHERE companycode = bsid~companycode AND document_type = bsid~accountingdocumenttype )
       INTO CORRESPONDING FIELDS OF TABLE @ms_response-data.
     IF sy-subrc = 0.
@@ -107,6 +109,86 @@
         ENDIF.
       ENDLOOP.
     ENDIF.
+*******gönderilmişler*****
+    SELECT * FROM ydbs_t_log
+    WHERE temporary_document IS NOT INITIAL
+      AND clearing_document IS NOT INITIAL
+      INTO TABLE @DATA(lt_send).
+    IF sy-subrc = 0.
+      SELECT bkpf~companycode,
+             bkpf~accountingdocument,
+             bkpf~fiscalyear,
+             bseg~accountingdocumentitem,
+             bseg~customer,
+             customer~organizationbpname1 AS customername,
+             customer~organizationbpname2 AS customersurname,
+             subscriber~bankinternalid,
+             send~invoicenumber,
+             customer~taxnumber1,
+             customer~taxnumber2,
+             subscriber~subscriber_number AS subscribernumber,
+             bseg~accountingdocumenttype,
+             bseg~documentdate,
+             bseg~postingdate,
+             bseg~duecalculationbasedate,
+             bseg~cashdiscount1days,
+             send~invoiceduedate,
+             bseg~absoluteamountintransaccrcy,
+             bseg~transactioncurrency,
+             bseg~absoluteamountintransaccrcy AS invoiceamount,
+             bkpf~documentreferenceid,
+             bseg~paymentmethod,
+             bseg~paymentblockingreason,
+             bseg~reference1idbybusinesspartner,
+             bseg~reference2idbybusinesspartner,
+             bseg~reference3idbybusinesspartner,
+             bseg~assignmentreference,
+             bseg~originalreferencedocument,
+             bseg~documentitemtext,
+             send~invoicestatus
+       FROM @lt_send AS send INNER JOIN i_journalentry            AS bkpf ON bkpf~companycode = send~companycode
+                                                                         AND bkpf~accountingdocument = send~accountingdocument
+                                                                         AND bkpf~fiscalyear = send~fiscalyear
+                             INNER JOIN i_operationalacctgdocitem AS bseg ON bseg~companycode        = send~companycode
+                                                                         AND bseg~accountingdocument = send~accountingdocument
+                                                                         AND bseg~fiscalyear         = send~fiscalyear
+                                                                         AND bseg~accountingdocumentitem = send~accountingdocumentitem
+                             INNER JOIN i_customer AS customer ON customer~customer = bseg~customer
+                             INNER JOIN ydbs_t_subsmap AS subscriber ON subscriber~companycode = send~companycode
+                                                                    AND subscriber~bankinternalid = send~bankinternalid
+                                                                    AND subscriber~customer = customer~customer
+              INTO CORRESPONDING FIELDS OF TABLE @lt_send_documents.
+      IF sy-subrc = 0.
+        SORT lt_send_documents BY companycode accountingdocument fiscalyear accountingdocumentitem bankinternalid.
+        DELETE ADJACENT DUPLICATES FROM lt_send_documents COMPARING companycode accountingdocument fiscalyear accountingdocumentitem bankinternalid.
+        SELECT limit~* FROM ydbs_t_limit AS limit INNER JOIN @lt_send_documents AS itab ON limit~companycode = itab~companycode
+                                                                                AND limit~bankinternalid = itab~bankinternalid
+                                                                                AND limit~customer = itab~customer
+                                                                                AND limit~currency = itab~transactioncurrency
+        ORDER BY limit_timestamp DESCENDING
+        INTO TABLE @DATA(lt_send_limit).
+
+        LOOP AT lt_send_documents ASSIGNING FIELD-SYMBOL(<ls_send_data>).
+          READ TABLE lt_limit INTO DATA(ls_send_limit) WITH KEY companycode = <ls_send_data>-companycode
+                                                             bankinternalid = <ls_send_data>-bankinternalid
+                                                                   customer = <ls_send_data>-customer
+                                                                   currency = <ls_send_data>-transactioncurrency.
+          IF sy-subrc = 0.
+            <ls_send_data>-limit_date             = ls_send_limit-limit_date.
+            <ls_send_data>-limit_time             = ls_send_limit-limit_time.
+            <ls_send_data>-total_limit            = ls_send_limit-total_limit.
+            <ls_send_data>-available_limit        = ls_send_limit-available_limit.
+            <ls_send_data>-risk                   = ls_send_limit-risk.
+            <ls_send_data>-maturity_amount        = ls_send_limit-maturity_amount.
+            <ls_send_data>-maturity_invoice_count = ls_send_limit-maturity_invoice_count.
+            <ls_send_data>-over_limit             = ls_send_limit-over_limit.
+          ENDIF.
+          <ls_send_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = 'R' ]-description OPTIONAL ).
+        ENDLOOP.
+        APPEND LINES OF lt_send_documents TO ms_response-data.
+      ENDIF.
+    ENDIF.
+*************************************
     DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
     response->set_text( lv_response_body ).
     response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).

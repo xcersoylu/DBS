@@ -4,4 +4,5 @@
     CONSTANTS: mc_header_content TYPE string VALUE 'content-type',
                mc_content_type   TYPE string VALUE 'text/json',
                mc_send           TYPE ydbs_e_api_type VALUE 'S',
-               mc_error          TYPE symsgty VALUE 'E'.
+               mc_error          TYPE symsgty VALUE 'E',
+               mc_ready          TYPE ydbs_e_invoicestatus VALUE 'R'.

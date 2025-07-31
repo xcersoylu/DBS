@@ -1,7 +1,7 @@
-class YCL_DBS_UPDATE_INVOICE definition
-  public
-  create public .
+CLASS ycl_dbs_update_invoice DEFINITION
+  PUBLIC
+  CREATE PUBLIC .
 
-public section.
+  PUBLIC SECTION.
 
-  interfaces IF_HTTP_SERVICE_EXTENSION .
+    INTERFACES if_http_service_extension .
