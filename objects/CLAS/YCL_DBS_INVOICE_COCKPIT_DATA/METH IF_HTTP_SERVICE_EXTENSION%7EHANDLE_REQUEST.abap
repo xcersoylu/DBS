@@ -97,12 +97,18 @@
                                                      fiscalyear = <fs_data>-fiscalyear
                                                      accountingdocumentitem = <fs_data>-accountingdocumentitem BINARY SEARCH.
         IF sy-subrc = 0.
-          <fs_data>-invoicenumber = ls_log-invoicenumber.
-          <fs_data>-invoiceduedate = ls_log-invoiceduedate.
-          <fs_data>-invoiceamount  = ls_log-invoiceamount.
-          <fs_data>-transactioncurrency = ls_log-transactioncurrency.
-          <fs_data>-invoicestatus = ls_log-invoicestatus.
-          <fs_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = ls_log-invoicestatus ]-description OPTIONAL ).
+          <fs_data>-invoicenumber           = ls_log-invoicenumber.
+          <fs_data>-invoiceduedate          = ls_log-invoiceduedate.
+          <fs_data>-invoiceamount           = ls_log-invoiceamount.
+          <fs_data>-transactioncurrency     = ls_log-transactioncurrency.
+          <fs_data>-invoicestatus           = ls_log-invoicestatus.
+          <fs_data>-invoicestatustext       = VALUE #( lt_invoicestatus[ value = ls_log-invoicestatus ]-description OPTIONAL ).
+          <fs_data>-collect_document        = ls_log-collect_document.
+          <fs_data>-collect_document_year   = ls_log-collect_document_year.
+          <fs_data>-clearing_document       = ls_log-clearing_document.
+          <fs_data>-clearing_document_year  = ls_log-clearing_document_year.
+          <fs_data>-temporary_document      = ls_log-temporary_document.
+          <fs_data>-temporary_document_year = ls_log-temporary_document_year.
         ELSE.
           <fs_data>-invoicestatus = 'R'.
           <fs_data>-invoicestatustext = VALUE #( lt_invoicestatus[ value = 'R' ]-description OPTIONAL ).
@@ -145,7 +151,13 @@
              bseg~assignmentreference,
              bseg~originalreferencedocument,
              bseg~documentitemtext,
-             send~invoicestatus
+             send~invoicestatus,
+             send~collect_document,
+             send~collect_document_year,
+             send~clearing_document,
+             send~clearing_document_year,
+             send~temporary_document,
+             send~temporary_document_year
        FROM @lt_send AS send INNER JOIN i_journalentry            AS bkpf ON bkpf~companycode = send~companycode
                                                                          AND bkpf~accountingdocument = send~accountingdocument
                                                                          AND bkpf~fiscalyear = send~fiscalyear
