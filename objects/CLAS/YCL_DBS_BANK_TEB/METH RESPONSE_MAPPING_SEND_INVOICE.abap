@@ -2,7 +2,7 @@
     DATA ls_teb_payment_no TYPE ydbs_t_teb_pymno.
     DATA(lt_xml) = ycl_dbs_common=>parse_xml( EXPORTING iv_xml_string  = iv_response ).
     READ TABLE lt_xml INTO DATA(ls_error_code) WITH KEY node_type = mc_value_node name = 'cevapKod'.
-    READ TABLE lt_xml INTO DATA(ls_error_text) WITH KEY node_type = mc_value_node name = 'cevapAciklama'.
+    READ TABLE lt_xml INTO DATA(ls_error_text) WITH KEY node_type = mc_value_node name = 'cevapAck'.
     READ TABLE lt_xml INTO DATA(ls_payment_no) WITH KEY node_type = mc_value_node name = 'bankaOdemeNo'.
     IF ls_error_code-value = '000'. "başarılı
       APPEND VALUE #( id = mc_id type = mc_success number = 003 ) TO rt_messages.
