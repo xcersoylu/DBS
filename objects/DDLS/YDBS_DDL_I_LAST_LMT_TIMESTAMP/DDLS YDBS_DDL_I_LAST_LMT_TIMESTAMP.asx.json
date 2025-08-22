@@ -12,7 +12,7 @@
     "SOURCE":"@AbapCatalog.viewEnhancementCategory: [#NONE]\r\n@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Limit En Güncel Kayıt'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@ObjectModel.usageType:{\r\n    serviceQuality: #X,\r\n    sizeCategory: #S,\r\n    dataClass: #MIXED\r\n}\r\ndefine view entity YDBS_DDL_I_LAST_LMT_TIMESTAMP\r\n  as select from ydbs_t_limit\r\n{\r\n  key companycode          as Companycode,\r\n  key bankinternalid       as Bankinternalid,\r\n  key customer             as Customer,\r\n  key currency             as Currency,\r\n  key max(limit_timestamp) as LimitTimestamp\r\n}\r\ngroup by\r\n  companycode,\r\n  bankinternalid,\r\n  customer,\r\n  currency\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"YDBS_T_LIMIT\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,T42",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

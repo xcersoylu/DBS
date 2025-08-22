@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'DBS Bankalar'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity YDBS_DDL_I_BANKS\r\n  as select from YDBS_T_BANKS\r\n  composition [0..*] of ydbs_ddl_I_service as _Service\r\n  composition [0..*] of ydbs_ddl_I_bnk_dtype as _Bank_DocType\r\n{\r\n  key bankinternalid as Bankinternalid,\r\n      bankname       as Bankname,\r\n      _Service,\r\n      _Bank_DocType\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"YDBS_T_BANKS\"\n],\n\"ASSOCIATED\":\n[\n\"YDBS_DDL_I_BNK_DTYPE\",\n\"YDBS_DDL_I_SERVICE\"\n],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"D",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

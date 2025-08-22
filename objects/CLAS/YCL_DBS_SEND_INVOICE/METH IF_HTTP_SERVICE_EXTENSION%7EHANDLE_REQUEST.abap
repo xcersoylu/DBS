@@ -60,7 +60,9 @@
                           temporary_document      = lv_temp_doc
                           temporary_document_year = lv_temp_year
                           clearing_document       = lv_clearing_doc
-                          clearing_document_year  = lv_clearing_year ) TO lt_log.
+                          clearing_document_year  = lv_clearing_year
+                          batch_id                = lo_bank->mv_batch_id
+                          trf_id                  = lo_bank->mv_trf_id ) TO lt_log.
 
         ENDIF.
 *clear

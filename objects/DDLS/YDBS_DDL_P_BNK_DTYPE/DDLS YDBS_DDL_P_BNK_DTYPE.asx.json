@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'DBS Banka Belge Türü Uyarlamalar'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine view entity YDBS_DDL_P_BNK_DTYPE \r\nas projection on YDBS_DDL_I_BNK_DTYPE\r\n{\r\n    key Bankinternalid,\r\n    key Companycode,\r\n    Housebank,\r\n    Housebankaccount,\r\n    ShortDescription,\r\n    ArbitrageAccount,\r\n    CollectionDocumentType,\r\n    SendingDocumentType,\r\n    DifferenceDocumentType,\r\n    ClearingAccount,\r\n    MainAccount,\r\n    Profitcenter,\r\n    /* Associations */\r\n    _Banks : redirected to parent YDBS_DDL_P_BANKS\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"YDBS_DDL_I_BNK_DTYPE\"\n],\n\"ASSOCIATED\":\n[\n\"YDBS_DDL_I_BANKS\",\n\"YDBS_DDL_P_BANKS\"\n],\n\"BASE\":\n[\n\"YDBS_DDL_I_BNK_DTYPE\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"4",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

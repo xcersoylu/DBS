@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Limit Güncelleme'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine root view entity YDBS_DDL_P_LIMIT\r\n  provider contract transactional_query\r\n  as projection on YDBS_DDL_I_LIMIT\r\n{\r\n  key Companycode,\r\n  key Bankinternalid,\r\n  key Customer,\r\n      CustomerName,\r\n      CustomerFullname,\r\n      SubscriberNumber,\r\n      TaxNumber1,\r\n      TaxNumber2,\r\n      Currency,\r\n      LimitDate,\r\n      LimitTime,\r\n      @Semantics.amount.currencyCode: 'Currency'\r\n      TotalLimit,\r\n      @Semantics.amount.currencyCode: 'Currency'\r\n      AvailableLimit,\r\n      @Semantics.amount.currencyCode: 'Currency'\r\n      Risk,\r\n      @Semantics.amount.currencyCode: 'Currency'\r\n      MaturityAmount,\r\n      MaturityInvoiceCount,\r\n      @Semantics.amount.currencyCode: 'Currency'\r\n      OverLimit\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"YDBS_DDL_I_LIMIT\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"62",
+    "CHGFLAG":"76",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'DBS Job Uyarlamaları'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity YDBS_DDL_I_JOB_MAP\r\n  as select from ydbs_t_job_map\r\n{\r\n  key companycode      as Companycode,\r\n      send             as Send,\r\n      collect          as Collect,\r\n      days_to_maturity as DaysToMaturity\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"YDBS_T_JOB_MAP\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,W4T2",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

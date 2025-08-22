@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'DBS Parametreler'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity YDBS_DDL_I_PARAMETER\r\n  as select from ydbs_t_parameter\r\n{\r\n  key parameter_name        as ParameterName,\r\n  key parameter_key         as ParameterKey,\r\n      parameter_value       as ParameterValue,\r\n      parameter_description as ParameterDescription\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"YDBS_T_PARAMETER\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"4T",
+    "CHGFLAG":"J,W4T2",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

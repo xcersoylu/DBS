@@ -218,7 +218,8 @@
     "IFR_STATE":"",
     "EVENT":"",
     "DYNAMIC":"",
-    "STCM":""
+    "STCM":"",
+    "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
  },

@@ -107,6 +107,13 @@
     "TYPE":"T",
     "LENGTH":6,
     "DECIMALS":-1
+   },
+   {
+    "NAME":"BUILD_ID",
+    "KEY":"",
+    "TYPE":"X",
+    "LENGTH":16,
+    "DECIMALS":-1
    }
   ],
   "properties":

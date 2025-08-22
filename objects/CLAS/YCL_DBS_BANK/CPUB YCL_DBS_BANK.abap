@@ -5,6 +5,8 @@ CLASS ycl_dbs_bank DEFINITION
 
   PUBLIC SECTION.
     DATA ms_collect_detail TYPE ydbs_s_collect_detail.
+    DATA mv_batch_id TYPE ydbs_e_batch_id.
+    DATA mv_trf_id TYPE ydbs_e_trf_id.
     CLASS-METHODS factory IMPORTING iv_bankinternalid TYPE bankk
                                     iv_companycode    TYPE bukrs
                                     iv_customer       TYPE kunnr

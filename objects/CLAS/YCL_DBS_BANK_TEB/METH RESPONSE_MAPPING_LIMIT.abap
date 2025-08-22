@@ -10,6 +10,6 @@
                         limit_date      = ls_time_info-date
                         limit_time      = ls_time_info-time
                         total_limit     = VALUE #( lt_xml[ node_type = mc_value_node name = 'limit' ]-value OPTIONAL )
-                        available_limit = VALUE #( lt_xml[ node_type = mc_value_node name = 'kullanilabilirlimit' ]-value OPTIONAL ) ).
+                        available_limit = VALUE #( lt_xml[ node_type = mc_value_node name = 'kullanilabilirLimit' ]-value OPTIONAL ) ).
     MODIFY ydbs_t_limit FROM @ls_limit.
   ENDMETHOD.

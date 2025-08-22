@@ -40,10 +40,10 @@
     "OBJECTNAME":"AIFI",
     "OBJECTTYPE":"L",
     "METHOD":"AFTER_IMP",
-    "METHODNAME":"/AIF/AIM_CONTENT_EXTRACT",
+    "METHODNAME":"/AIF/AIM_AIFI_CONTENT_EXTRACT",
     "UPGRADE":"X",
     "MULTI_OBJ":"",
-    "LANG_OBJ":"",
+    "LANG_OBJ":"X",
     "SHADOW_SYS":""
    }
   ]
@@ -67,6 +67,28 @@
     "OBJECTNAME":"AIFI",
     "OBJECTTYPE":"L",
     "TABNAME":"/AIF/ICD_DATA_IT",
+    "COVER":"",
+    "CANDIDATE":"",
+    "DDIC":"X",
+    "PRIM_TABLE":"",
+    "VIEWGRANT":"",
+    "TAB_FILLED":""
+   },
+   {
+    "OBJECTNAME":"AIFI",
+    "OBJECTTYPE":"L",
+    "TABNAME":"/AIF/ICD_ERR_LBT",
+    "COVER":"",
+    "CANDIDATE":"",
+    "DDIC":"X",
+    "PRIM_TABLE":"",
+    "VIEWGRANT":"",
+    "TAB_FILLED":""
+   },
+   {
+    "OBJECTNAME":"AIFI",
+    "OBJECTTYPE":"L",
+    "TABNAME":"/AIF/ICD_INFDISP",
     "COVER":"",
     "CANDIDATE":"",
     "DDIC":"X",
@@ -125,6 +147,30 @@
     "TOBJKEY":"/&/*",
     "MASKNLEN":15,
     "MASKKLEN":2,
+    "PRIM_TABLE":""
+   },
+   {
+    "OBJECTNAME":"AIFI",
+    "OBJECTTYPE":"L",
+    "TRWCOUNT":3,
+    "TPGMID":"R3TR",
+    "TOBJECT":"TABU",
+    "TOBJ_NAME":"/AIF/ICD_INFDISP",
+    "TOBJKEY":"/&/L",
+    "MASKNLEN":16,
+    "MASKKLEN":2,
+    "PRIM_TABLE":""
+   },
+   {
+    "OBJECTNAME":"AIFI",
+    "OBJECTTYPE":"L",
+    "TRWCOUNT":4,
+    "TPGMID":"R3TR",
+    "TOBJECT":"TABU",
+    "TOBJ_NAME":"/AIF/ICD_ERR_LBT",
+    "TOBJKEY":"/&/L/*",
+    "MASKNLEN":16,
+    "MASKKLEN":3,
     "PRIM_TABLE":""
    }
   ]
