@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"YDBS_E_CLEARING_DOCUMENT",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Clearing Document",
+    "REPTEXT":"Clearing Document",
+    "SCRTEXT_S":"Clr.Doc.",
+    "SCRTEXT_M":"Clearing Document",
+    "SCRTEXT_L":"Clearing Document"
+   },
+   {
+    "ROLLNAME":"YDBS_E_CLEARING_DOCUMENT",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

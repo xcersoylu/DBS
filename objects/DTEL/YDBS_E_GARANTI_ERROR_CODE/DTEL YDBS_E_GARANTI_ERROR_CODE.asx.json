@@ -4,10 +4,10 @@
   "data":
   [
    {
-    "ROLLNAME":"YDBS_E_BATCH_ID",
+    "ROLLNAME":"YDBS_E_GARANTI_ERROR_CODE",
     "AS4LOCAL":"L",
     "AS4VERS":0,
-    "DOMNAME":"YDBS_D_NUMC13",
+    "DOMNAME":"",
     "ROUTPUTLEN":0,
     "MEMORYID":"",
     "LOGFLAG":"",
@@ -27,16 +27,16 @@
     "SHLPNAME":"",
     "SHLPFIELD":"",
     "DEFFDNAME":"",
-    "DATATYPE":"NUMC",
-    "LENG":13,
+    "DATATYPE":"CHAR",
+    "LENG":4,
     "DECIMALS":0,
-    "OUTPUTLEN":13,
+    "OUTPUTLEN":4,
     "LOWERCASE":"",
     "SIGNFLAG":"",
     "CONVEXIT":"",
     "VALEXI":"",
     "ENTITYTAB":"",
-    "REFKIND":"D",
+    "REFKIND":"",
     "REFTYPE":"",
     "PROXYTYPE":"",
     "LTRFLDDIS":"",
@@ -51,26 +51,26 @@
   "data":
   [
    {
-    "ROLLNAME":"YDBS_E_BATCH_ID",
+    "ROLLNAME":"YDBS_E_GARANTI_ERROR_CODE",
     "DDLANGUAGE":"E",
     "AS4LOCAL":"N",
     "AS4VERS":0,
-    "DDTEXT":"Batch ID",
-    "REPTEXT":"Batch ID",
-    "SCRTEXT_S":"Batch ID",
-    "SCRTEXT_M":"Batch ID",
-    "SCRTEXT_L":"Batch ID"
+    "DDTEXT":"Garanti Bank Error Code",
+    "REPTEXT":"Garanti Code",
+    "SCRTEXT_S":"Gar Err Cd",
+    "SCRTEXT_M":"Garanti Code",
+    "SCRTEXT_L":"Garanti Code"
    },
    {
-    "ROLLNAME":"YDBS_E_BATCH_ID",
+    "ROLLNAME":"YDBS_E_GARANTI_ERROR_CODE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,
-    "DDTEXT":"Batch ID",
-    "REPTEXT":"Batch ID",
-    "SCRTEXT_S":"Batch ID",
-    "SCRTEXT_M":"Batch ID",
-    "SCRTEXT_L":"Batch ID"
+    "DDTEXT":"Garanti Bankası Hata Kodu",
+    "REPTEXT":"Garanti Code",
+    "SCRTEXT_S":"Gar Err Cd",
+    "SCRTEXT_M":"Garanti Code",
+    "SCRTEXT_L":"Garanti Code"
    }
   ]
  },
@@ -79,7 +79,7 @@
   "data":
   [
    {
-    "TYPENAME":"YDBS_E_BATCH_ID",
+    "TYPENAME":"YDBS_E_GARANTI_ERROR_CODE",
     "STATE":"N",
     "TYPEKIND":"DTEL"
    }
@@ -92,7 +92,7 @@
    {
     "PGMID":"R3TR",
     "OBJECT":"DTEL",
-    "OBJ_NAME":"YDBS_E_BATCH_ID",
+    "OBJ_NAME":"YDBS_E_GARANTI_ERROR_CODE",
     "KORRNUM":"",
     "SRCSYSTEM":"...",
     "AUTHOR":"SAP_CUSTOMER",
@@ -109,8 +109,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2025-08-15",
-    "CHECK_DATE":"2025-08-15",
+    "CREATED_ON":"2025-08-29",
+    "CHECK_DATE":"2025-08-29",
     "CHECK_CFG":""
    }
   ]

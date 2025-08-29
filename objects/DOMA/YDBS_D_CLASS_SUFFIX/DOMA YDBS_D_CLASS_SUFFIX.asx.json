@@ -152,6 +152,15 @@
     "DOMVALUE_L":"GAR",
     "DOMVALUE_H":"",
     "APPVAL":""
+   },
+   {
+    "DOMNAME":"YDBS_D_CLASS_SUFFIX",
+    "AS4LOCAL":"N",
+    "VALPOS":12,
+    "AS4VERS":0,
+    "DOMVALUE_L":"KUV",
+    "DOMVALUE_H":"",
+    "APPVAL":""
    }
   ]
  },
@@ -389,6 +398,17 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"GAR"
+   },
+   {
+    "DOMNAME":"YDBS_D_CLASS_SUFFIX",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":12,
+    "AS4VERS":0,
+    "DDTEXT":"KuveytTürk",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"KUV"
    }
   ]
  },

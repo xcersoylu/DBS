@@ -218,6 +218,24 @@
     "DOKLRELES":"",
     "DOKLDATE":"0000-00-00",
     "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YDBS_MC012",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
    }
   ]
  },
@@ -356,6 +374,17 @@
     "TXTLINES":0,
     "DOKSTATE":"N",
     "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YDBS_MC012",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
    }
   ]
  },
@@ -430,6 +459,18 @@
     "TEXT":"Unuploaded invoices cannot be selected."
    },
    {
+    "SPRSL":"E",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"011",
+    "TEXT":"Updated Due Date."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"012",
+    "TEXT":"Webservice request cannot be empty."
+   },
+   {
     "SPRSL":"T",
     "ARBGB":"YDBS_MC",
     "MSGNR":"000",
@@ -500,6 +541,12 @@
     "ARBGB":"YDBS_MC",
     "MSGNR":"011",
     "TEXT":"Vade tarihi güncellendi."
+   },
+   {
+    "SPRSL":"T",
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"012",
+    "TEXT":"Webservis isteği boş olamaz."
    }
   ]
  },
@@ -614,6 +661,13 @@
    {
     "ARBGB":"YDBS_MC",
     "MSGNR":"011",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-08-29",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"YDBS_MC",
+    "MSGNR":"012",
     "NAME":"SAP_CUSTOMER",
     "DATUM":"2025-08-29",
     "SELFDEF":"3"

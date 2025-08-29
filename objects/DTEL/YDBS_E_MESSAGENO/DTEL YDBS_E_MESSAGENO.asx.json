@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"YDBS_E_MESSAGENO",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Message No",
+    "REPTEXT":"Message No",
+    "SCRTEXT_S":"MessageNo",
+    "SCRTEXT_M":"Message No",
+    "SCRTEXT_L":"Message No"
+   },
+   {
+    "ROLLNAME":"YDBS_E_MESSAGENO",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

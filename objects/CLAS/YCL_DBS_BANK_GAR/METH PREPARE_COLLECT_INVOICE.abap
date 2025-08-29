@@ -1,11 +1,11 @@
   METHOD prepare_collect_invoice.
     DATA lv_request TYPE string.
     SELECT SINGLE trf_id
-    from ydbs_t_log
+    FROM ydbs_t_log
     WHERE companycode = @ms_invoice_data-companycode
-      and accountingdocument = @ms_invoice_data-accountingdocument
-      and accountingdocumentitem = @ms_invoice_data-accountingdocumentitem
-    into @data(lv_trf_id).
+      AND accountingdocument = @ms_invoice_data-accountingdocument
+      AND accountingdocumentitem = @ms_invoice_data-accountingdocumentitem
+    INTO @DATA(lv_trf_id).
     CONCATENATE
   '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pay="PaymentService">'
      '<soapenv:Header/>'

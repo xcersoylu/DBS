@@ -4,10 +4,10 @@
   "data":
   [
    {
-    "ROLLNAME":"YDBS_E_BATCH_ID",
+    "ROLLNAME":"YDBS_E_GAR_ID_TYPE",
     "AS4LOCAL":"L",
     "AS4VERS":0,
-    "DOMNAME":"YDBS_D_NUMC13",
+    "DOMNAME":"YDBS_D_GAR_ID_TYPE",
     "ROUTPUTLEN":0,
     "MEMORYID":"",
     "LOGFLAG":"",
@@ -27,14 +27,14 @@
     "SHLPNAME":"",
     "SHLPFIELD":"",
     "DEFFDNAME":"",
-    "DATATYPE":"NUMC",
-    "LENG":13,
+    "DATATYPE":"CHAR",
+    "LENG":1,
     "DECIMALS":0,
-    "OUTPUTLEN":13,
+    "OUTPUTLEN":1,
     "LOWERCASE":"",
     "SIGNFLAG":"",
     "CONVEXIT":"",
-    "VALEXI":"",
+    "VALEXI":"X",
     "ENTITYTAB":"",
     "REFKIND":"D",
     "REFTYPE":"",
@@ -51,26 +51,26 @@
   "data":
   [
    {
-    "ROLLNAME":"YDBS_E_BATCH_ID",
+    "ROLLNAME":"YDBS_E_GAR_ID_TYPE",
     "DDLANGUAGE":"E",
     "AS4LOCAL":"N",
     "AS4VERS":0,
-    "DDTEXT":"Batch ID",
-    "REPTEXT":"Batch ID",
-    "SCRTEXT_S":"Batch ID",
-    "SCRTEXT_M":"Batch ID",
-    "SCRTEXT_L":"Batch ID"
+    "DDTEXT":"Garanti ID",
+    "REPTEXT":"Garanti ID",
+    "SCRTEXT_S":"Gar ID",
+    "SCRTEXT_M":"Garanti ID",
+    "SCRTEXT_L":"Garanti ID"
    },
    {
-    "ROLLNAME":"YDBS_E_BATCH_ID",
+    "ROLLNAME":"YDBS_E_GAR_ID_TYPE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,
-    "DDTEXT":"Batch ID",
-    "REPTEXT":"Batch ID",
-    "SCRTEXT_S":"Batch ID",
-    "SCRTEXT_M":"Batch ID",
-    "SCRTEXT_L":"Batch ID"
+    "DDTEXT":"Garanti ID",
+    "REPTEXT":"Garanti ID",
+    "SCRTEXT_S":"Gar ID",
+    "SCRTEXT_M":"Garanti ID",
+    "SCRTEXT_L":"Garanti ID"
    }
   ]
  },
@@ -79,7 +79,7 @@
   "data":
   [
    {
-    "TYPENAME":"YDBS_E_BATCH_ID",
+    "TYPENAME":"YDBS_E_GAR_ID_TYPE",
     "STATE":"N",
     "TYPEKIND":"DTEL"
    }
@@ -92,7 +92,7 @@
    {
     "PGMID":"R3TR",
     "OBJECT":"DTEL",
-    "OBJ_NAME":"YDBS_E_BATCH_ID",
+    "OBJ_NAME":"YDBS_E_GAR_ID_TYPE",
     "KORRNUM":"",
     "SRCSYSTEM":"...",
     "AUTHOR":"SAP_CUSTOMER",
@@ -109,8 +109,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2025-08-15",
-    "CHECK_DATE":"2025-08-15",
+    "CREATED_ON":"2025-08-29",
+    "CHECK_DATE":"2025-08-29",
     "CHECK_CFG":""
    }
   ]

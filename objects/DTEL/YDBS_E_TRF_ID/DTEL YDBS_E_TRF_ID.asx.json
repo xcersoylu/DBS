@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"YDBS_E_TRF_ID",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"TRF ID",
+    "REPTEXT":"TRF ID",
+    "SCRTEXT_S":"TRF ID",
+    "SCRTEXT_M":"TRF ID",
+    "SCRTEXT_L":"TRF ID"
+   },
+   {
+    "ROLLNAME":"YDBS_E_TRF_ID",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,
