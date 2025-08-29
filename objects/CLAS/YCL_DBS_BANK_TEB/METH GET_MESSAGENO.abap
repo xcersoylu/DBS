@@ -1,4 +1,4 @@
-  METHOD GET_MESSAGENO.
+  METHOD get_messageno.
     TRY.
         cl_numberrange_runtime=>number_get(
           EXPORTING

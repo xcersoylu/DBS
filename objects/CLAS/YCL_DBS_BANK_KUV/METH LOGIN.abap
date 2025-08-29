@@ -17,6 +17,7 @@
             END OF ty_json.
     DATA ls_request TYPE string.
     DATA ls_response TYPE ty_json.
+    DATA lv_url TYPE c LENGTH 255.
     CONCATENATE
     '{'
       '"ExtUName": "' ms_service_info-username '",'
@@ -24,7 +25,8 @@
     '}' INTO ls_request.
 
     TRY.
-        DATA(lo_http_destination) = cl_http_destination_provider=>create_by_url( CONV #( ms_service_info-cpi_url ) ).
+        lv_url = |{ ms_service_info-additional_field2 }{ ms_service_info-additional_field3 }|.
+        DATA(lo_http_destination) = cl_http_destination_provider=>create_by_url( CONV #( lv_url ) ).
         DATA(lo_web_http_client) = cl_web_http_client_manager=>create_by_http_destination( lo_http_destination ) .
         DATA(lo_web_http_request) = lo_web_http_client->get_http_request( ).
         lo_web_http_request->set_authorization_basic(
@@ -51,7 +53,6 @@
             EXPORTING json = lv_response
             CHANGING data = ls_response ).
           rv_sessionkey = ls_response-sessionkey.
-        ELSE.
         ENDIF.
       CATCH cx_http_dest_provider_error cx_web_http_client_error cx_web_message_error.
     ENDTRY.
