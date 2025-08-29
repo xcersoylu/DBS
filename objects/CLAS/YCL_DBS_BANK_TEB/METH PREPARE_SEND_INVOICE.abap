@@ -43,7 +43,7 @@
             '<com:paraKod>' lv_waers '</com:paraKod>'
             '<com:faturaVade>' lv_vade '</com:faturaVade>'
             '<com:faturaTarih>' lv_bldat '</com:faturaTarih>'
-            '<com:taksitAdet> </com:taksitAdet>'
+            '<com:taksitAdet></com:taksitAdet>'
             '<com:mesajNo>' lv_messageno '</com:mesajNo>'
             '<com:satisTmslBilgi></com:satisTmslBilgi>'
             '<com:aciklama></com:aciklama>'

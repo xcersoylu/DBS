@@ -61,6 +61,11 @@
                           ).
       MODIFY ydbs_t_limit FROM @ls_limit.
     ELSE.
-      "#TODO hata olması durumunu düşün
+      adding_error_message(
+        EXPORTING
+          iv_message  = ls_json-errordetails-errormessage
+        CHANGING
+          ct_messages = rt_messages
+      ).
     ENDIF.
   ENDMETHOD.

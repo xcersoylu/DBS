@@ -50,5 +50,11 @@
                           over_limit             = ls_limit_info-notguarantedinvoiceamount ).
       MODIFY ydbs_t_limit FROM @ls_limit.
     ELSE.
+      adding_error_message(
+        EXPORTING
+          iv_message  = ls_json-result_message
+        CHANGING
+          ct_messages = rt_messages
+      ).
     ENDIF.
   ENDMETHOD.

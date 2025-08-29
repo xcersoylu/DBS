@@ -68,15 +68,15 @@
       READ TABLE lt_xml_response INTO DATA(ls_xml_response) WITH KEY detay-satir-faturano = ms_invoice_data-invoicenumber.
       SHIFT ls_xml_response-detay-satir-fattutar    LEFT DELETING LEADING '0'.
       SHIFT ls_xml_response-detay-satir-odntutarytl LEFT DELETING LEADING '0'.
-          IF ls_xml_response-detay-satir-odntutarytl IS NOT INITIAL AND ls_xml_response-detay-satir-odntutarytl GT 0.
-          es_collect_detail-payment_amount = ls_xml_response-detay-satir-odntutarytl.
-          es_collect_detail-payment_currency = 'TRY'.
-          ELSE.
-          es_collect_detail-payment_amount = ls_xml_response-detay-satir-fattutar.
-          es_collect_detail-payment_currency = ls_xml_response-detay-satir-doviz.
-          ENDIF.
-          CONCATENATE ls_xml_response-detay-islemtrh(4) ls_xml_response-detay-islemtrh+5(2)
-          ls_xml_response-detay-islemtrh+8(2) INTO es_collect_detail-payment_date.
+      IF ls_xml_response-detay-satir-odntutarytl IS NOT INITIAL AND ls_xml_response-detay-satir-odntutarytl GT 0.
+        es_collect_detail-payment_amount = ls_xml_response-detay-satir-odntutarytl.
+        es_collect_detail-payment_currency = 'TRY'.
+      ELSE.
+        es_collect_detail-payment_amount = ls_xml_response-detay-satir-fattutar.
+        es_collect_detail-payment_currency = ls_xml_response-detay-satir-doviz.
+      ENDIF.
+      CONCATENATE ls_xml_response-detay-islemtrh(4) ls_xml_response-detay-islemtrh+5(2)
+      ls_xml_response-detay-islemtrh+8(2) INTO es_collect_detail-payment_date.
     ELSE.
       APPEND VALUE #( id = mc_id type = mc_error number = 004 ) TO rt_messages.
       adding_error_message(
