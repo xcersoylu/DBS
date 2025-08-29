@@ -143,6 +143,15 @@
     "DOMVALUE_L":"TEB",
     "DOMVALUE_H":"",
     "APPVAL":""
+   },
+   {
+    "DOMNAME":"YDBS_D_CLASS_SUFFIX",
+    "AS4LOCAL":"N",
+    "VALPOS":11,
+    "AS4VERS":0,
+    "DOMVALUE_L":"GAR",
+    "DOMVALUE_H":"",
+    "APPVAL":""
    }
   ]
  },
@@ -369,6 +378,17 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"TEB"
+   },
+   {
+    "DOMNAME":"YDBS_D_CLASS_SUFFIX",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":11,
+    "AS4VERS":0,
+    "DDTEXT":"Garanti Bankası",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"GAR"
    }
   ]
  },

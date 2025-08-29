@@ -15,7 +15,7 @@
   '"Musteri_DBS_No": "' ms_subscribe-subscriber_number '",'
   '"Fatura_No": "' ms_invoice_data-invoicenumber '",'
   '"Fatura_Tutari": ' lv_amount ','
-  '"Aciklama": "' ms_subscribe-customer'",'
+  '"Aciklama": "' ms_subscribe-customer '",'
   '"Vade_Tarihi": "' lv_date '"'
   '}'
   '}' INTO rv_request.

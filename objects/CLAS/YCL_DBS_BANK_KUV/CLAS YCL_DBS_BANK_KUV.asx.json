@@ -4,7 +4,7 @@
   "data":
   [
    {
-    "TYPENAME":"YCL_DBS_BANK_TEB",
+    "TYPENAME":"YCL_DBS_BANK_KUV",
     "STATE":"A",
     "TYPEKIND":"CLAS"
    }
@@ -15,9 +15,9 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "CLSTYPE":0,
-    "UUID":"+hY+u89+H+Cbi9Rsg+elXg==",
+    "UUID":"+hY+u89+H+Chh4lag4Fltw==",
     "REMOTE":""
    }
   ]
@@ -27,14 +27,14 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "VERSION":1,
     "CATEGORY":0,
     "EXPOSURE":2,
     "STATE":1,
     "RELEASE":0,
     "AUTHOR":"",
-    "CREATEDON":"2025-07-29",
+    "CREATEDON":"2025-08-28",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "CHGDANYBY":"",
@@ -51,7 +51,7 @@
     "UNICODE":"5",
     "RSTAT":"",
     "CLSBCIMPL":"",
-    "R3RELEASE":"914",
+    "R3RELEASE":"916",
     "CLSBCTRANS":"",
     "CLSBCCAT":0,
     "CLSBCNODEL":"",
@@ -71,9 +71,9 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "LANGU":"T",
-    "DESCRIPT":"TEB DBS"
+    "DESCRIPT":"KuveytTürk DBS"
    }
   ]
  },
@@ -82,9 +82,23 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
-    "CMPNAME":"GET_MESSAGENO",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"LOGIN",
     "CMPTYPE":1,
+    "MTDTYPE":0,
+    "MTDTYPE2":0
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"MC_SUCCESS_CODE",
+    "CMPTYPE":0,
+    "MTDTYPE":0,
+    "MTDTYPE2":0
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"MV_SESSIONKEY",
+    "CMPTYPE":0,
     "MTDTYPE":0,
     "MTDTYPE2":0
    }
@@ -95,8 +109,8 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
-    "CMPNAME":"GET_MESSAGENO",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"LOGIN",
     "VERSION":1,
     "ALIAS":"",
     "REDEFIN":"",
@@ -105,9 +119,9 @@
     "EDITORDER":1,
     "LOCKED":"",
     "DISPID":0,
-    "R3RELEASE":"916",
+    "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"2025-08-22",
+    "CREATEDON":"2025-08-28",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -152,6 +166,124 @@
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
     "TYPESRC":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"MC_SUCCESS_CODE",
+    "VERSION":1,
+    "ALIAS":"",
+    "REDEFIN":"",
+    "EXPOSURE":0,
+    "STATE":1,
+    "EDITORDER":2,
+    "LOCKED":"",
+    "DISPID":0,
+    "R3RELEASE":"",
+    "AUTHOR":"",
+    "CREATEDON":"2025-08-28",
+    "CHANGEDBY":"",
+    "CHANGEDON":"0000-00-00",
+    "MTDDECLTYP":0,
+    "MTDABSTRCT":"",
+    "MTDFINAL":"",
+    "DSRNOTEOM":"",
+    "EDTX":"",
+    "MTDNEWEXC":"",
+    "MTDREPLACE":"",
+    "MTDOPTNL":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPRDONLY":"",
+    "MTDAMDPCDSCLNT":"",
+    "MTDAMDPCLNTINDEP":"",
+    "ATTDECLTYP":2,
+    "ATTDYNAMIC":"",
+    "ATTGETMTD":"",
+    "ATTSETMTD":"",
+    "ATTRDONLY":"",
+    "ATTVALUE":"200",
+    "ATTPERSIST":"",
+    "ATTBUSOBJ":"",
+    "ATTKEYFLD":"",
+    "ATTEXPVIRT":0,
+    "EVTDECLTYP":0,
+    "TYPDUMMY":"",
+    "TYPTYPE":1,
+    "TYPE":"I",
+    "TABLEOF":"",
+    "SRCROW1":0,
+    "SRCCOLUMN1":0,
+    "SRCROW2":0,
+    "SRCCOLUMN2":0,
+    "REFCLSNAME":"",
+    "REFINTNAME":"",
+    "REFCMPNAME":"",
+    "BCMTDINST":"",
+    "BCMTDCAT":0,
+    "BCMTDDIA":"",
+    "BCMTDCOM":"",
+    "BCMTDSYN":0,
+    "BCEVTCAT":0,
+    "TYPESRC_LENG":0,
+    "TYPESRC":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"MV_SESSIONKEY",
+    "VERSION":1,
+    "ALIAS":"",
+    "REDEFIN":"",
+    "EXPOSURE":0,
+    "STATE":1,
+    "EDITORDER":1,
+    "LOCKED":"",
+    "DISPID":0,
+    "R3RELEASE":"916",
+    "AUTHOR":"",
+    "CREATEDON":"2025-08-28",
+    "CHANGEDBY":"",
+    "CHANGEDON":"0000-00-00",
+    "MTDDECLTYP":0,
+    "MTDABSTRCT":"",
+    "MTDFINAL":"",
+    "DSRNOTEOM":"",
+    "EDTX":"",
+    "MTDNEWEXC":"",
+    "MTDREPLACE":"",
+    "MTDOPTNL":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPRDONLY":"",
+    "MTDAMDPCDSCLNT":"",
+    "MTDAMDPCLNTINDEP":"",
+    "ATTDECLTYP":0,
+    "ATTDYNAMIC":"",
+    "ATTGETMTD":"",
+    "ATTSETMTD":"",
+    "ATTRDONLY":"",
+    "ATTVALUE":"",
+    "ATTPERSIST":"",
+    "ATTBUSOBJ":"",
+    "ATTKEYFLD":"",
+    "ATTEXPVIRT":0,
+    "EVTDECLTYP":0,
+    "TYPDUMMY":"",
+    "TYPTYPE":1,
+    "TYPE":"STRING",
+    "TABLEOF":"",
+    "SRCROW1":0,
+    "SRCCOLUMN1":0,
+    "SRCROW2":0,
+    "SRCCOLUMN2":0,
+    "REFCLSNAME":"",
+    "REFINTNAME":"",
+    "REFCMPNAME":"",
+    "BCMTDINST":"",
+    "BCMTDCAT":0,
+    "BCMTDDIA":"",
+    "BCMTDCOM":"",
+    "BCMTDSYN":0,
+    "BCEVTCAT":0,
+    "TYPESRC_LENG":0,
+    "TYPESRC":""
    }
   ]
  },
@@ -160,8 +292,20 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
-    "CMPNAME":"GET_MESSAGENO",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"LOGIN",
+    "LANGU":"T",
+    "DESCRIPT":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"MC_SUCCESS_CODE",
+    "LANGU":"T",
+    "DESCRIPT":""
+   },
+   {
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"MV_SESSIONKEY",
     "LANGU":"T",
     "DESCRIPT":""
    }
@@ -172,12 +316,12 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "STATE":1,
     "AUTHOR":"",
-    "CREATEDON":"2025-07-29",
+    "CREATEDON":"2025-08-28",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "RELTYPE":2,
@@ -195,7 +339,7 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"PREPARE_COLLECT_INVOICE",
@@ -205,7 +349,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"PREPARE_DELETE_INVOICE",
@@ -215,7 +359,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"PREPARE_SEND_INVOICE",
@@ -225,7 +369,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"PREPARE_UPDATE_INVOICE",
@@ -235,7 +379,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"PREPARE_UPDATE_LIMIT",
@@ -245,7 +389,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"RESPONSE_MAPPING_COLLECT_INV",
@@ -255,7 +399,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"RESPONSE_MAPPING_DELETE_INV",
@@ -265,7 +409,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"RESPONSE_MAPPING_LIMIT",
@@ -275,7 +419,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"RESPONSE_MAPPING_SEND_INVOICE",
@@ -285,7 +429,7 @@
     "EXPOSURE":2
    },
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
     "REFCLSNAME":"YCL_DBS_BANK",
     "VERSION":1,
     "MTDNAME":"RESPONSE_MAPPING_UPDATE_INV",
@@ -301,9 +445,9 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
-    "CMPNAME":"GET_MESSAGENO",
-    "SCONAME":"RV_MESSAGENO",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"LOGIN",
+    "SCONAME":"RV_SESSIONKEY",
     "CMPTYPE":1,
     "MTDTYPE":0,
     "SCOTYPE":0
@@ -315,21 +459,21 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
-    "CMPNAME":"GET_MESSAGENO",
-    "SCONAME":"RV_MESSAGENO",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"LOGIN",
+    "SCONAME":"RV_SESSIONKEY",
     "VERSION":1,
     "EDITORDER":1,
     "LOCKED":"",
     "DISPID":0,
     "AUTHOR":"SAP_CUSTOMER",
-    "CREATEDON":"2025-08-22",
+    "CREATEDON":"2025-08-28",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "PARDECLTYP":3,
     "PARPASSTYP":0,
     "TYPTYPE":1,
-    "TYPE":"YDBS_E_MESSAGENO",
+    "TYPE":"STRING",
     "TABLEOF":"",
     "SRCROW1":0,
     "SRCCOLUMN1":0,
@@ -348,9 +492,9 @@
   "data":
   [
    {
-    "CLSNAME":"YCL_DBS_BANK_TEB",
-    "CMPNAME":"GET_MESSAGENO",
-    "SCONAME":"RV_MESSAGENO",
+    "CLSNAME":"YCL_DBS_BANK_KUV",
+    "CMPNAME":"LOGIN",
+    "SCONAME":"RV_SESSIONKEY",
     "LANGU":"T",
     "DESCRIPT":""
    }
@@ -363,7 +507,7 @@
    {
     "PGMID":"R3TR",
     "OBJECT":"CLAS",
-    "OBJ_NAME":"YCL_DBS_BANK_TEB",
+    "OBJ_NAME":"YCL_DBS_BANK_KUV",
     "KORRNUM":"",
     "SRCSYSTEM":"...",
     "AUTHOR":"SAP_CUSTOMER",
@@ -380,8 +524,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2025-07-29",
-    "CHECK_DATE":"2025-07-29",
+    "CREATED_ON":"2025-08-28",
+    "CHECK_DATE":"2025-08-28",
     "CHECK_CFG":""
    }
   ]
@@ -391,75 +535,75 @@
   "data":
   [
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
     "METHODINDX":0,
     "METHODNAME":" ",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
     "METHODINDX":1,
+    "METHODNAME":"LOGIN",
+    "FLAGS":0
+   },
+   {
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":2,
     "METHODNAME":"PREPARE_COLLECT_INVOICE",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":2,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":3,
     "METHODNAME":"PREPARE_DELETE_INVOICE",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":3,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":4,
     "METHODNAME":"PREPARE_SEND_INVOICE",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":4,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":5,
     "METHODNAME":"PREPARE_UPDATE_INVOICE",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":5,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":6,
     "METHODNAME":"PREPARE_UPDATE_LIMIT",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":6,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":7,
     "METHODNAME":"RESPONSE_MAPPING_COLLECT_INV",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":7,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":8,
     "METHODNAME":"RESPONSE_MAPPING_DELETE_INV",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":8,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":9,
     "METHODNAME":"RESPONSE_MAPPING_LIMIT",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":9,
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
+    "METHODINDX":10,
     "METHODNAME":"RESPONSE_MAPPING_SEND_INVOICE",
     "FLAGS":0
    },
    {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
-    "METHODINDX":10,
-    "METHODNAME":"RESPONSE_MAPPING_UPDATE_INV",
-    "FLAGS":0
-   },
-   {
-    "CLASSNAME":"YCL_DBS_BANK_TEB",
+    "CLASSNAME":"YCL_DBS_BANK_KUV",
     "METHODINDX":11,
-    "METHODNAME":"GET_MESSAGENO",
+    "METHODNAME":"RESPONSE_MAPPING_UPDATE_INV",
     "FLAGS":0
    }
   ]
@@ -469,7 +613,7 @@
   "data":
   [
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CCAU",
+    "NAME":"YCL_DBS_BANK_KUV==============CCAU",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -480,7 +624,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CCDEF",
+    "NAME":"YCL_DBS_BANK_KUV==============CCDEF",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -491,7 +635,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CCIMP",
+    "NAME":"YCL_DBS_BANK_KUV==============CCIMP",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -502,7 +646,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CCMAC",
+    "NAME":"YCL_DBS_BANK_KUV==============CCMAC",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -513,7 +657,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CI",
+    "NAME":"YCL_DBS_BANK_KUV==============CI",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -524,7 +668,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM001",
+    "NAME":"YCL_DBS_BANK_KUV==============CM001",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -535,7 +679,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM002",
+    "NAME":"YCL_DBS_BANK_KUV==============CM002",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -546,7 +690,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM003",
+    "NAME":"YCL_DBS_BANK_KUV==============CM003",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -557,7 +701,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM004",
+    "NAME":"YCL_DBS_BANK_KUV==============CM004",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -568,7 +712,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM005",
+    "NAME":"YCL_DBS_BANK_KUV==============CM005",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -579,7 +723,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM006",
+    "NAME":"YCL_DBS_BANK_KUV==============CM006",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -590,7 +734,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM007",
+    "NAME":"YCL_DBS_BANK_KUV==============CM007",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -601,7 +745,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM008",
+    "NAME":"YCL_DBS_BANK_KUV==============CM008",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -612,7 +756,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM009",
+    "NAME":"YCL_DBS_BANK_KUV==============CM009",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -623,7 +767,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM00A",
+    "NAME":"YCL_DBS_BANK_KUV==============CM00A",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -634,7 +778,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CM00B",
+    "NAME":"YCL_DBS_BANK_KUV==============CM00B",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -645,7 +789,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CO",
+    "NAME":"YCL_DBS_BANK_KUV==============CO",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
@@ -656,7 +800,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CP",
+    "NAME":"YCL_DBS_BANK_KUV==============CP",
     "EDTX":"X",
     "VARCL":"X",
     "DBAPL":"S",
@@ -668,7 +812,7 @@
     "UCCHECK":"5"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CT",
+    "NAME":"YCL_DBS_BANK_KUV==============CT",
     "DBAPL":"S",
     "DBNA":"D$",
     "SUBC":"I",
@@ -678,7 +822,7 @@
     "UCCHECK":"X"
    },
    {
-    "NAME":"YCL_DBS_BANK_TEB==============CU",
+    "NAME":"YCL_DBS_BANK_KUV==============CU",
     "VARCL":"X",
     "DBAPL":"S",
     "DBNA":"D$",
