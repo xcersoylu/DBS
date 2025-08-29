@@ -1,4 +1,5 @@
   METHOD prepare_update_limit.
+    mv_methodname = 'GetLimitInfo'.
     IF mv_sessionkey IS INITIAL.
       mv_sessionkey = login(  ).
     ENDIF.

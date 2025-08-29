@@ -1,6 +1,7 @@
   METHOD prepare_update_invoice.
     DATA : lv_amount   TYPE string.
     DATA : lv_duedate TYPE c LENGTH 10.
+    mv_methodname = 'CreateInvoiceCrud'.
     IF mv_sessionkey IS INITIAL.
       mv_sessionkey = login(  ).
     ENDIF.

@@ -3,6 +3,7 @@
     DATA ms_subscribe TYPE ydbs_t_subsmap.
     DATA ms_invoice_data TYPE ydbs_s_invoice_cockpit_data.
     DATA mv_api_type TYPE ydbs_e_api_type.
+    data mv_methodname type ydbs_e_methodname.
     CONSTANTS mc_id TYPE symsgid VALUE 'YDBS_MC'.
     CONSTANTS mc_error TYPE symsgty VALUE 'E'.
     CONSTANTS mc_success TYPE symsgty VALUE 'S'.

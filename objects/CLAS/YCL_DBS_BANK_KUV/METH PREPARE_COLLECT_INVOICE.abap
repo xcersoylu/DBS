@@ -1,6 +1,7 @@
   METHOD prepare_collect_invoice.
     DATA lv_bdate TYPE c LENGTH 10.
     DATA lv_edate TYPE c LENGTH 10.
+    mv_methodname = 'GetInvoiceResults'.
     IF mv_sessionkey IS INITIAL.
       mv_sessionkey = login(  ).
     ENDIF.

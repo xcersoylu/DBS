@@ -35,7 +35,8 @@
           ENDCASE.
           lo_web_http_request->set_header_fields( VALUE #( (  name = 'Accept' value = lv_value )
                                                            (  name = 'Content-Type' value = lv_value )
-                                                           (  name = 'CompanyCode' value = |DBS{ ms_service_info-class_suffix  }{ ms_service_info-companycode }| ) ) ).
+                                                           (  name = 'CompanyCode' value = |DBS{ ms_service_info-class_suffix  }{ ms_service_info-companycode }| )
+                                                           (  name = 'method-name' value = mv_methodname ) ) ).
           lo_web_http_request->set_text(
             EXPORTING
               i_text   = lv_request
@@ -84,10 +85,12 @@
               RECEIVING
                 r_value = DATA(lv_error)
             ).
-            APPEND VALUE #( id = mc_id type = mc_error number = 000 message_v1 = lv_error(50)
-                                                                   message_v2 = lv_error+50(50)
-                                                                   message_v3 = lv_error+100(50)
-                                                                   message_v4 = lv_error+150(50) ) TO et_messages.
+            adding_error_message(
+              EXPORTING
+                iv_message  = lv_error
+              CHANGING
+                ct_messages = et_messages
+            ).
           ENDIF.
 
         CATCH cx_http_dest_provider_error cx_web_http_client_error cx_web_message_error.
